@@ -1,0 +1,38 @@
+---
+import { songs } from "../data/songs"; // Import the static song data
+
+const songList = songs; // Use the imported data
+import Layout from "../Layout/Layout.astro";
+---
+
+<Layout>
+    <div class="h-screen">
+  <h1>Songs Collection</h1>
+  <div class="song-list">
+    {
+      songList.map((song) => (
+        <a href={`/song/${song.id}`} class="song-item">
+          <img src={song.image} alt={song.title} transition:name={song.trans} width="200" height="200"/>
+          <p>{song.title}</p>
+        </a>
+      ))
+    }
+  </div>
+</div>
+</Layout>
+
+<style>
+  .song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .song-item {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .song-item:hover img {
+    transform: scale(1.05);
+  }
+</style>

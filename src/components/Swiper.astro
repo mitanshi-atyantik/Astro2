@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Component</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000; /* Adjust the color of the navigation arrows */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="swiper-container">
+      <swiper-container
+        navigation="true"
+        space-between="30"
+        slides-per-view="3"
+        class="mySwiper"
+      >
+        <swiper-slide
+          ><div class="category">HOTEL/</div>
+          <div class="category">GREECE</div>
+          <img
+            src="/images/2.jpg"
+            alt="Hotel Image 1"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUILA ELOUNDA VILLAGE</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">SPA/</div>
+          <div class="category">THAILAND</div>
+          <img
+            src="/images/3.jpg"
+            alt="Hotel Image 2"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">
+            QUAN SPA AT CHAING MAI <br />
+            MARRIOTT HOTEL
+          </div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">RESTAURANT/</div>
+          <div class="category">TURKEY</div>
+          <img
+            src="/images/4.jpg"
+            alt="Hotel Image 3"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUAMARINE RESTAURANT</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">HOTEL/</div>
+          <div class="category">GREECE</div>
+          <img
+            src="/images/2.jpg"
+            alt="Hotel Image 1"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUILA ELOUNDA VILLAGE</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">SPA/</div>
+          <div class="category">THAILAND</div>
+          <img
+            src="/images/3.jpg"
+            alt="Hotel Image 2"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">
+            QUAN SPA AT CHAING MAI <br />
+            MARRIOTT HOTEL
+          </div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">RESTAURANT/</div>
+          <div class="category">TURKEY</div>
+          <img
+            src="/images/4.jpg"
+            alt="Hotel Image 3"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUAMARINE RESTAURANT</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">HOTEL/</div>
+          <div class="category">GREECE</div>
+          <img
+            src="/images/2.jpg"
+            alt="Hotel Image 1"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUILA ELOUNDA VILLAGE</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">SPA/</div>
+          <div class="category">THAILAND</div>
+          <img
+            src="/images/3.jpg"
+            alt="Hotel Image 2"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">
+            QUAN SPA AT CHAING MAI <br />
+            MARRIOTT HOTEL
+          </div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+        <swiper-slide
+          ><div class="category">RESTAURANT/</div>
+          <div class="category">TURKEY</div>
+          <img
+            src="/images/4.jpg"
+            alt="Hotel Image 3"
+            class="hotel-image"
+            width="350"
+            height="350"
+          />
+          <div class="hotel-name">AQUAMARINE RESTAURANT</div>
+          <a href="#" class="read-more">Read More</a></swiper-slide
+        >
+      </swiper-container>
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
+  </body>
+</html>

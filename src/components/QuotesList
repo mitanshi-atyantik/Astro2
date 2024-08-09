@@ -1,0 +1,229 @@
+// import React, { useEffect, useState } from 'react'
+
+// const Quotes = () => {
+//     const [quotes, setquotes] = useState([])
+//     const [selectedOption, setSelectedOption] = useState('');
+//     const [originalQuotes, setOriginalQuotes] = useState([]);
+//     const [inpt, setInpt] = useState('')
+//     const [inpt2, setInpt2] = useState('')
+
+//     const getQoutes = async () => {
+//         const res = await fetch('https://dummyjson.com/quotes');
+//         const data = await res.json();
+//         setquotes(data.quotes)
+//         setOriginalQuotes(data.quotes)
+
+//     }
+
+//     const handleRadioChange = (event) => {
+//         setSelectedOption(event.target.value);
+//       };
+
+//     // const handleSearch = (term) => {
+//     //     console.log(selectedOption)
+//     //     console.log(term)
+//     //     if (term == "") {
+//     //         setquotes(originalQuotes)
+//     //         return;
+//     //     }
+//     //     const filteredQuotes = originalQuotes.filter((quoteI) => {
+//     //         if (selectedOption === 'quote') {
+//     //             return quoteI.quote.toLowerCase().includes(term.toLowerCase());
+//     //         } else if (selectedOption === 'author') {
+//     //             return quoteI.author.toLowerCase().includes(term.toLowerCase());
+//     //         }
+//     //         return false;
+//     //     })
+//     //     setquotes(filteredQuotes)
+//     // }
+    
+//     const handleSearch = (term) => {
+//         console.log(term)
+//         if (term == "") {
+//             setquotes(originalQuotes)
+//             return;
+//         }
+//         const filteredQuotes = originalQuotes.filter((quoteI) => {
+//             if (quoteI.quote.toLowerCase().includes(term.toLowerCase())) {
+//                 return quoteI;
+//             }
+//         })
+//         setquotes(filteredQuotes)
+//     }
+//     const handleSearchByAuthor = (term) => {
+//         console.log(term)
+//         if (term == "") {
+//             setquotes(originalQuotes)
+//             return;
+//         }
+//         const filteredQuotes = originalQuotes.filter((quoteI) => {
+//             if (quoteI.author.toLowerCase().includes(term.toLowerCase())) {
+//                 return quoteI;
+//             }
+//         })
+//         setquotes(filteredQuotes)
+//     }
+
+//     useEffect(() => {
+//         getQoutes()
+//     }, [])
+
+
+//     return (
+//         <div>
+//             <div class="container mx-auto min-h-screen">
+//                 <h1 class="text-3xl font-bold mb-6 text-center">Quotes Collection</h1>
+//               <div class = "text-center">
+//               <input 
+//           type="radio" 
+//           id="option1" 
+//           name="searchOption" 
+//           value="quote"
+//           checked={selectedOption === 'quote'}
+//           onChange={handleRadioChange}
+//         />
+//         <label htmlFor="option1">Quote</label><br />
+
+//         <input 
+//           type="radio" 
+//           id="option2" 
+//           name="searchOption" 
+//           value="author"
+//           checked={selectedOption === 'author'}
+//           onChange={handleRadioChange}
+//         />
+//         <label htmlFor="option2">Author</label><br />
+//                     <input type="text" placeholder='Search Quote' value={inpt} onChange={(e) => {
+//                         const newVal = e.target.value
+//                         setInpt(newVal)
+//                         handleSearch(newVal);
+
+//                     }}
+//                         style={{ border: "1px solid black", padding: "0.5rem", borderRadius: "10px", width:"25rem",  margin: "2rem" }} />
+                
+                
+//                     <input type="text" placeholder='Search By Author' value={inpt2} onChange={(e) => {
+//                         const newVal = e.target.value
+//                         setInpt2(newVal)
+//                         handleSearchByAuthor(newVal);
+
+//                     }}
+//                         style={{ border: "1px solid black", padding: "0.5rem", borderRadius: "10px",   width:"25rem",margin: "2rem" }} />
+//                 </div>
+//                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+//                     {
+//                         quotes.map(quote => (
+//                             <div class="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+//                                 <p class="text-gray-800 text-lg mb-4">{quote.quote}</p>
+//                                 <p class="text-gray-600 text-sm">-{quote.author}</p>
+//                             </div>
+
+//                         ))
+//                     }
+
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default Quotes
+
+
+
+import React, { useEffect, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
+const Quotes = () => {
+    const [quotes, setQuotes] = useState([]);
+    const [originalQuotes, setOriginalQuotes] = useState([]);
+    const [inpt, setInpt] = useState('');
+    const [hasMore, setHasMore] = useState(true);
+    const [page, setPage] = useState(1);
+    const quotesPerPage = 30;
+
+    // Fetch quotes from API
+    const getQuotes = async (page) => {
+        const res = await fetch(`https://dummyjson.com/quotes?limit=${quotesPerPage}&page=${page}`);
+        const data = await res.json();
+        if (data.quotes.length < quotesPerPage) {
+            setHasMore(false);
+        }
+        setQuotes((prevQuotes) => [...prevQuotes, ...data.quotes]);
+        setOriginalQuotes((prevQuotes) => [...prevQuotes, ...data.quotes]);
+    };
+
+    // Handle search functionality
+    const handleSearch = (term) => {
+        if (term === '') {
+            setQuotes(originalQuotes);
+        } 
+        
+            const filteredQuotes = originalQuotes.filter((quote) => {
+                
+                if(quote.quote.toLowerCase().includes(term.toLowerCase())){
+                    return quote;
+                }
+           
+        }
+            );
+            setQuotes(filteredQuotes);
+     
+    };
+
+    // Fetch more quotes on scroll
+    const fetchMoreData = () => {
+        const nextPage = page + 1;
+        setPage(nextPage);
+        getQuotes(nextPage);
+    };
+
+    useEffect(() => {
+        getQuotes(page); 
+    }, []);
+
+    return (
+        <div className="container mx-auto min-h-screen">
+            <h1 className="text-3xl font-bold mb-6 text-center">Quotes Collection</h1>
+            <div className="text-center mb-6">
+                <input
+                    type="text"
+                    placeholder="Search Quote"
+                    value={inpt}
+                    onChange={(e) => {
+                        const newVal = e.target.value;
+                        setInpt(newVal);
+                        handleSearch(newVal);
+                    }}
+                    className="border border-gray-300 p-2 rounded-md w-full max-w-lg mx-auto"
+                />
+            </div>
+            <InfiniteScroll
+                dataLength={quotes.length}
+                next={fetchMoreData}
+                hasMore={hasMore}
+                loader={<h4 className="text-center">Loading...</h4>}
+                endMessage={
+                    <p className="text-center text-gray-600">
+                        <b>Yay! You have seen it all</b>
+                    </p>
+                }
+            >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {quotes.map((quote, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-200 p-6 rounded-lg shadow-lg flex flex-col justify-between"
+                        >
+                            <p className="text-gray-800 text-lg mb-4">"{quote.quote}"</p>
+                            <p className="text-gray-600 text-sm">- {quote.author}</p>
+                        </div>
+                    ))}
+                </div>
+            </InfiniteScroll>
+        </div>
+    );
+};
+
+export default Quotes;
