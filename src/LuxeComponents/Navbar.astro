@@ -1,0 +1,173 @@
+---
+import Button from "./Button.astro";
+---
+
+<nav
+  class="sm:hidden bg-white border-b border-gray-300 py-2 px-6 md:flex justify-between items-center uppercase hidden "
+>
+  
+  <div class="flex items-center space-x-4">
+    <a href="/" class="text-black text-sm px-4">Home</a>
+    <div class="relative">
+      <button
+        class="text-black text-sm px-4 py-2 bg-white border-none cursor-pointer uppercase"
+      >
+        Winners ▼
+      </button>
+      <div
+        class="dropdown absolute hidden bg-white border border-gray-300 shadow-lg z-10 w-40 group-hover:block uppercase"
+      >
+        <a
+          href="/winner2023"
+          class="block text-black px-4 py-2 hover:bg-gray-100">Winner 2023</a
+        >
+        <a
+          href="/winner2024"
+          class="block text-black px-4 py-2 hover:bg-gray-100">Winner 2024</a
+        >
+      </div>
+    </div>
+    <a href="/about" class="text-black text-sm px-4"
+      >About the Awards</a
+    >
+  </div>
+
+  <div class="flex-grow flex justify-center items-center">
+    <a href="/" class="flex items-center">
+      <img
+        src="https://www.luxeglobalawards.com/images/371a297a15fb1e72fb59-logo.svg"
+        alt="Luxe Global"
+        width="71"
+        height="64"
+      />
+    </a>
+  </div>
+
+  <div class="flex items-center space-x-4">
+    <a href="/explore" class="text-black text-sm px-4"
+      >Explore</a
+    >
+    <a href="/contact" class="text-black text-sm px-4"
+      >Contact</a
+    >
+    <Button title="Register" />
+    <div class="block text-black text-2xl cursor-pointer" id="hamburger-icon">
+      &#9776;
+    </div>
+  </div>
+</nav>
+
+<nav
+  class="bg-white border-b border-gray-300 py-2 uppercase md:hidden"
+>
+  <div class="responsive-nav lg:hidden flex items-center justify-between  space-x-4">
+    <div></div>
+    <div class="flex-grow flex justify-center items-center">
+      <a href="/" class="flex items-center">
+        <img
+          src="https://www.luxeglobalawards.com/images/371a297a15fb1e72fb59-logo.svg"
+          alt="Luxe Global"
+          width="71"
+          height="64"
+        />
+      </a>
+    </div>
+    <div class="block text-black text-2xl cursor-pointer" id="hamburger-icon-responsive">
+      &#9776;
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+
+<div
+  id="sidebar"
+  class="fixed top-0 right-0 h-full bg-white border-l border-gray-300 shadow-lg w-0 transition-transform transform translate-x-full z-50 flex flex-col justify-center items-center p-14 space-y-6"
+>
+  <button id="close-sidebar" class="absolute top-4 right-4 text-2xl">×</button>
+  <ul class="flex flex-col items-center space-y-6 uppercase">
+    <li>
+      <a href="/home" class="block text-black text-lg"
+        >Home</a>
+    </li>
+    <li>
+      <a href="/explore" class="block text-black text-lg"
+        >Explore</a>
+    </li>
+    <li>
+      <a href="/winners" class="block text-black text-lg"
+        >Winners</a>
+    </li>
+    <li>
+      <a href="/about" class="block text-black text-lg"
+        >About the Awards</a>
+    </li>
+    <li>
+      <a href="/contact" class="block text-black text-lg"
+        >Contact</a>
+    </li>
+    <li>
+      <a
+        href="/industry-insights"
+        class="block text-black text-lg"
+        >Industry Insights</a>
+    </li>
+    <li>
+      <a href="/press" class="block text-black text-lg"
+        >Press</a>
+    </li>
+    <li>
+      <a href="/partners" class="block text-black text-lg"
+        >Partners</a>
+    </li>
+    <li>
+      <a href="/shop" class="block text-black text-lg"
+        >Shop</a>
+    </li>
+  </ul>
+  <div class="flex flex-col items-center space-y-4 mt-auto mb-6">
+    <Button title="Register" />
+    <Button title="Nominate" />
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".relative").forEach((dropdown) => {
+      dropdown.addEventListener("mouseover", () => {
+        dropdown.querySelector(".dropdown").classList.remove("hidden");
+      });
+      dropdown.addEventListener("mouseout", () => {
+        dropdown.querySelector(".dropdown").classList.add("hidden");
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const hamburgerIconResponsive = document.getElementById("hamburger-icon-responsive");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
+
+    // Open sidebar
+    hamburgerIcon.addEventListener("click", () => {
+      sidebar.style.width = "30%"; 
+      sidebar.style.transform = "translateX(0)"; 
+    });
+    
+    hamburgerIconResponsive.addEventListener("click", () => {
+      sidebar.style.width = "100%";
+      sidebar.style.transform = "translateX(0)";
+    });
+
+    // Close sidebar
+    closeSidebar.addEventListener("click", () => {
+      sidebar.style.width = "0"; 
+      sidebar.style.transform = "translateX(100%)";
+    });
+
+   
+  });
+</script>

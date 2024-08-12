@@ -11,14 +11,20 @@ const { url, btn } = Astro.props
   </video>
   {btn && (
     <div class="relative z-10 flex gap-2.5 items-center">
-      <Button title="Enter Luxe Global Awards" class="bg-white/80 border-none px-4 py-2 text-lg cursor-pointer rounded-md" />
-      <Button title="Explore Travel Destinations" class="bg-white/80 border-none px-4 py-2 text-lg cursor-pointer rounded-md" />
-    </div>
+
+      <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544]">Enter Luxe Global Awards</a>
+
+        <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white  rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544]">Explore Travel Destinations</a>
+  
+  
+</div>
+
+  
+
   )}
 </div>
 
 <style>
-  /* Tailwind doesn't support media queries directly inside <style> tags */
   @media (max-width: 768px) {
     .button-container button {
       @apply text-sm px-3 py-2;

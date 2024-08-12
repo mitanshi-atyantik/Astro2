@@ -9,6 +9,9 @@ export default {
 			  backgroundImage: {
 				'custom-gradient': 'linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)',
 			  },
+			  fontWeight: {
+				'hairline': 100, // Custom name for font-weight: 100
+			  },
 		},
 	},
 	plugins: [],
