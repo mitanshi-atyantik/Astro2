@@ -10,11 +10,11 @@ const { url, btn } = Astro.props
     Your browser does not support the video tag.
   </video>
   {btn && (
-    <div class="relative z-10 flex gap-2.5 items-center">
+    <div class="relative z-10 flex sm:flex-row gap-2.5 items-center flex-col ">
 
-      <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544]">Enter Luxe Global Awards</a>
+      <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544] [@media(max-width: 768px)]:text-sm [@media(max-width: 768px)]:px-3 [@media(max-width: 768px)]:py-2 [@media(max-width: 480px)]:text-xs [@media(max-width: 480px)]:px-3 [@media(max-width: 480px)]:py-1">Enter Luxe Global Awards</a>
 
-        <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white  rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544]">Explore Travel Destinations</a>
+        <a href="#" class=" text-sm no-underline hover:text-white hover:cursor-pointer text-[#978544] bg-white  rounded-full py-2 px-4 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544] [@media(max-width: 768px)]:text-sm [@media(max-width: 768px)]:px-3 [@media(max-width: 768px)]:py-2 [@media(max-width: 480px)]:text-xs [@media(max-width: 480px)]:px-3 [@media(max-width: 480px)]:py-1">Explore Travel Destinations</a>
   
   
 </div>

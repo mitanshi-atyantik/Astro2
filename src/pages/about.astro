@@ -1,10 +1,18 @@
 ---
+import Showcase from "../AboutComponents/Showcase.astro";
+import Ourstory from '../AboutComponents/Ourstory.astro'
+import Ourmission from "../AboutComponents/Ourmission.astro";
+import Ourvision from '../AboutComponents/Ourvision.astro'
+import Ladyluxe from '../AboutComponents/Ladyluxe.astro'
+import Voting from '../AboutComponents/Voting.astro'
 import Layout from "../Layout/Layout.astro";
-import AboutContent from "../components/AboutContent.astro";
-import Showcase from "../components/Showcase.astro";
 ---
 
 <Layout>
-    <Showcase title = 'About Us'/>
-    <AboutContent/>
+    <Showcase/>
+    <Ourstory/>
+    <Ourmission />
+    <Ourvision />
+    <Ladyluxe />
+    <Voting/>
 </Layout>
