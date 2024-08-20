@@ -4,31 +4,31 @@ import RegistrationForm from "./RegistrationForm.astro";
 ---
 
 <nav
-  class="sm:hidden bg-white border-b border-gray-300 py-2 px-6 md:flex justify-between items-center uppercase hidden "
+  class="sm:hidden bg-white border-b border-gray-300 py-2 px-8 md:flex justify-between items-center uppercase hidden "
 >
   
-  <div class="flex items-center space-x-4">
-    <a href="/" class="text-black text-sm px-4">Home</a>
+  <div class="flex items-center space-x-6">
+    <a href="/" class="text-black text-xs px-4">Home</a>
     <div class="relative">
       <button
-        class="text-black text-sm px-4 py-2 bg-white border-none cursor-pointer uppercase"
+        class="text-black text-xs px-4 py-2 bg-white border-none cursor-pointer uppercase"
       >
-        Winners ▼
+        Winners | ▼
       </button>
       <div
         class="dropdown absolute hidden bg-white border border-gray-300 shadow-lg z-10 w-40 group-hover:block uppercase"
       >
         <a
-          href="/winner2023"
+          href="/winners2023"
           class="block text-black px-4 py-2 hover:bg-gray-100">Winner 2023</a
         >
         <a
-          href="/winner2024"
-          class="block text-black px-4 py-2 hover:bg-gray-100">Winner 2024</a
+          href="/winners2022"
+          class="block text-black px-4 py-2 hover:bg-gray-100">Winner 2022</a
         >
       </div>
     </div>
-    <a href="/about" class="text-black text-sm px-4"
+    <a href="/about" class="text-black text-xs px-4"
       >About the Awards</a
     >
   </div>
@@ -45,10 +45,10 @@ import RegistrationForm from "./RegistrationForm.astro";
   </div>
 
   <div class="flex items-center space-x-4">
-    <a href="/explore" class="text-black text-sm px-4"
+    <a href="/explore" class="text-black text-xs px-4"
       >Explore</a
     >
-    <a href="/contact" class="text-black text-sm px-4"
+    <a href="/contact" class="text-black text-xs px-4"
       >Contact</a
     >
     <Button title="Register" className="register-button" />
@@ -183,7 +183,12 @@ import RegistrationForm from "./RegistrationForm.astro";
     registerButtons.forEach((button) =>{
 
       button.addEventListener("click", () => {
-        registrationForm.style.width = "50%"; 
+        if(window.innerWidth > 768){
+          registrationForm.style.width = "50%"; 
+        }else{
+          registrationForm.style.width = "100%"; 
+        }
+        
       registrationForm.style.transform = "translateX(0)";
       overlay.style.opacity = "0.7"; // Show the overlay
       overlay.style.pointerEvents = "auto"; // Allow clicks to close the form

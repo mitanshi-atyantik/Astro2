@@ -1,0 +1,119 @@
+<div
+  class="image-container flex justify-between w-full px-8 py-[0] h-full bg-[black] text-[#fff]"
+>
+
+
+
+
+  <div class="image-item relative m-4 w-2/5 [aspect-ratio:40/80]">
+    <div class="heading flex justify-center items-center gap-[0.8rem] mb-4">
+      <div class="logo1 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/a30d6d664bbd8d70e325-awards-left-ico.svg')] bg-cover"></div><p
+        class="text-center m-0 px-[0] py-[10px] relative uppercase text-[12px] text-[white]"
+      >
+        hotel of the year
+      </p><div class="logo2 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/1292597e04db92596ba7-awards-right-ico.svg')] bg-cover"></div>
+    </div>
+    <div class="image-overlay absolute top-[10] left-[0] w-full h-[90%] bg-[rgba(0,_0,_0,_0.6)] text-[#fff] flex justify-center items-center opacity-0 [transition:opacity_0.3s_ease] pointer-events-none ">
+      <div class="image-name absolute w-3/5 bottom-2/5 [transition:1s] flex flex-col justify-center items-center text-center text -[1.5rem] [transition: 1s]">
+        <span class="place text-[13px] uppercase text-[rgba(168,_165,_165,_0.945)] m-[0.8rem]">Maldives</span>
+
+        <span class="place-name text-[20px] uppercase text-[#ffffffe0]">Fushifaru Maldive</span>
+      </div>
+    </div>
+    <div
+      class="img w-full h-4/5 block [transition:opacity_0.3s_ease] bg-cover bg-center"
+      style="background-image: url('https://www.luxeglobalawards.com/images/e2d2c3700bd7bbeff371-fushifaru.jpg')"
+    >
+    </div>
+  </div>
+
+
+
+
+
+  <div class="image-item relative m-4 w-2/5 [aspect-ratio:40/80]">
+    <div class="heading flex justify-center items-center gap-[0.8rem] mb-4">
+      <div class="logo1 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/a30d6d664bbd8d70e325-awards-left-ico.svg')] bg-cover"></div><p
+        class="text-center m-0 px-[0] py-[10px] relative uppercase text-[12px] text-[white]"
+      >
+        spa of the year
+      </p><div class="logo2 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/1292597e04db92596ba7-awards-right-ico.svg')] bg-cover"></div>
+    </div>
+    <div class="image-overlay absolute top-[10] left-[0] w-full h-[90%] bg-[rgba(0,_0,_0,_0.6)] text-[#fff] flex justify-center items-center opacity-0 [transition:opacity_0.3s_ease] pointer-events-none ">
+      <div class="image-name absolute w-3/5 bottom-2/5 [transition:1s] flex flex-col justify-center items-center text-center text -[1.5rem] [transition: 1s]">
+        <span class="place text-[13px] uppercase text-[rgba(168,_165,_165,_0.945)] m-[0.8rem]">Russia</span>
+
+        <span class="place-name text-[20px] uppercase text-[#ffffffe0]">Rixos Royal Spa</span>
+      </div>
+    </div>
+    <div
+      class="img w-full h-4/5 block [transition:opacity_0.3s_ease] bg-cover bg-center"
+      style="background-image: url('https://www.luxeglobalawards.com/images/1bfb471f13bacfc59212-rixos.jpg')"
+    >
+    </div>
+  </div>
+
+
+
+
+  <div class="image-item relative m-4 w-2/5 [aspect-ratio:40/80]">
+    <div class="heading flex justify-center items-center gap-[0.8rem] mb-4">
+      <div class="logo1 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/a30d6d664bbd8d70e325-awards-left-ico.svg')] bg-cover"></div><p
+        class="text-center m-0 px-[0] py-[10px] relative uppercase text-[12px] text-[white]"
+      >
+        Restaurant of the year
+      </p><div class="logo2 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/1292597e04db92596ba7-awards-right-ico.svg')] bg-cover"></div>
+    </div>
+    <div class="image-overlay absolute top-[10] left-[0] w-full h-[90%] bg-[rgba(0,_0,_0,_0.6)] text-[#fff] flex justify-center items-center opacity-0 [transition:opacity_0.3s_ease] pointer-events-none ">
+      <div class="image-name absolute w-3/5 bottom-2/5 [transition:1s] flex flex-col justify-center items-center text-center  ">
+        <span class="place text-[13px] uppercase text-[rgba(168,_165,_165,_0.945)] m-[0.8rem]">India</span>
+
+        <span class="place-name text-[20px] uppercase text-[#ffffffe0]">Villa Maya ( A Fabled Kitchen)</span>
+      </div>
+    </div>
+    <div
+      class="img w-full h-4/5 block [transition:opacity_0.3s_ease] bg-cover bg-center"
+      style="background-image: url('https://www.luxeglobalawards.com/images/55f153fde10b9d242fc2-maya.jpg')"
+    >
+    </div>
+  </div>
+</div>
+
+<style>
+  
+  .image-item:hover .image-overlay {
+    opacity: 1;
+  }
+
+  .image-name {
+    bottom: 40%; /* Start at the center */
+    
+  }
+
+  
+
+  .image-item:hover .image-name {
+    bottom: 50%;
+  }
+
+  /* Styles for the slider on smaller screens */
+  @media (max-width: 768px) {
+    .image-container {
+      display: flex;
+      /* overflow: hidden; */
+      position: relative;
+      width: 80%;
+    }
+
+    .image-item {
+      flex: 0 0 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .image-name {
+        
+      bottom: 10%;
+      transform: translateY(0);
+    }
+  }
+</style>

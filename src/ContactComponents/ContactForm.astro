@@ -1,0 +1,187 @@
+<div class="contact-container">
+    <!-- Contact Details Column -->
+    <div class="contact-details">
+        <div class="headings text-4xl mb-8 uppercase text-[black]">
+            <p class="heading1">Inquiries?</p>
+          <p class="heading2 font-['Times_New_Roman',_Times,_serif] ">Contact Us</p>
+          </div>
+      <p class="contact-info">
+        PLEASE SEND US A MESSSAGE AND WE’LL BE IN TOUCH WITH YOU AS SOON AS POSSIBLE. THANK YOU.
+      </p>
+      <div class="address">
+        <p class="tags">Address:</p> 
+        
+            
+            <div class="sub-info">
+                <span class="d-block">Cape Town,</span>
+            <br>
+            <span class="d-block">South Africa</span>
+            </div>
+       
+        <p class="tags">Telephone</p>
+         <div class="sub-info">+27 21 201 6445</div>
+        <p class="tags">email</p> 
+        <div class="sub-info">info@luxeglobalawards.com</div>
+    </div>
+    </div>
+    
+    <!-- Inquiry Form Column -->
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Your name & Surname*
+        </label>
+          <input type="text" id="name" >
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address*</label>
+          <input type="email" id="email">
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact Number*</label>
+          <input type="tel" id="contact" >
+        </div>
+        <div class="form-group">
+          <label for="inquiry">Inquiry*</label>
+          <textarea id="inquiry" ></textarea>
+        </div>
+        <div class="check-box">
+          <input type="checkbox" id="terms">
+          <label for="terms">I accept the 
+            <a href="/">Terms and Conditions</a> and <a href="/">Privacy Policy</a></label>
+        </div>
+        <button type="submit">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+
+  
+
+  <style>
+    .contact-container {
+  display: flex;
+  gap: 20px; /* Adjust gap as needed */
+  padding: 35px;
+}
+
+
+.contact-details {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+
+
+.contact-info{
+    width: 80%;
+    font-size: 0.9rem;
+    color: #5e5d5d;
+    margin-bottom: 3rem;
+}
+
+
+.contact-details .tags {
+  color: #8b8b8b;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sub-info{
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.contact-form {
+  padding: 20px;
+  width: 75%;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+  color: #adadad;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.check-box label {
+    font-size: 13px;
+  color: #adadad;
+  margin: 1rem 0;
+}
+
+.check-box a{
+    text-decoration: underline;
+}
+
+.form-group input, .form-group textarea {
+  border: none;
+  border-bottom: 1px solid #000000;
+  background-color: transparent;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.check-box{
+    display: flex;
+    gap: 1rem;
+}
+.contact-form button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff; /* Darker shade for hover effect */
+  color: #000000;
+  border: 1px solid black;
+}
+
+
+@media (max-width: 768px) {
+    .contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust gap as needed */
+  padding: 35px;
+}
+
+.contact-details{
+    text-align: center;
+}
+
+.contact-form{
+    width: 100%;
+}
+}
+
+  </style>

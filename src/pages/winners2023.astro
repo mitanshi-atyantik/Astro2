@@ -1,0 +1,23 @@
+---
+import Layout from "../Layout/Layout.astro";
+import Video2 from "../LuxeComponents/Video2.astro";
+import Oftheyear from "../WinnersComponents/Oftheyear.astro";
+import ShowcaseWinners from "../WinnersComponents/ShowcaseWinners.astro";
+import OverallWinners from '../WinnersComponents/OverallWinners.astro'
+import Overall2 from "../WinnersComponents/Overall2.astro";
+import Oftheyear2 from "../WinnersComponents/Oftheyear2.astro";
+import data23 from '../WinnersComponents/data/data23.json'
+
+
+---
+
+
+<Layout>
+    <ShowcaseWinners year="2023" rank="2nd"/>
+    <Oftheyear2 data={data23}/>
+    <!-- <Oftheyear /> -->
+    <Video2 url="https://www.luxeglobalawards.com/assets/67b1e04d0a0ee1026af0-LUXE_GLOBAL_2023.mp4" />
+    <!-- <OverallWinners /> -->
+     <Overall2 data={data23}/>
+</Layout>
+

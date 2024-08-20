@@ -1,15 +1,24 @@
-<div class="flex items-center justify-center w-full lg:h-[70vh] bg-black text-white  h-[50vh]">
-    <div class="flex flex-col items-center w-[80%]  text-center">
-        <p class="">The second</p>
-        <p>Annual Luxe global</p>
-        <div class="text-about text-6xl  sm:text-7xl lg:text-8xl font-normal font-sans tracking-wide">
-            Award
-        </div>
-        <div class="text-luxe text-6xl  sm:text-7xl lg:text-8xl font-thin">
-            Winners
-        </div>
-        <div class="text-luxe text-6xl  sm:text-7xl lg:text-8xl font-thin">
-            2023
-        </div>
+---
+const {year, rank} = Astro.props
+---
+<div
+  class="flex items-center justify-center w-full lg:h-[80vh] bg-black text-white h-[50vh]"
+>
+  <div class="flex flex-col items-center w-[80%] text-center">
+    <p class="leading-6 text-sm text-[#ffffff99] uppercase">
+      The {rank}
+      <br />
+      <span class="d-block">Annual Luxe global</span>
+    </p>
+    <div
+      class="text-about text-6xl sm:text-7xl lg:text-8xl font-normal font-sans tracking-wide"
+    >
+      Award
     </div>
+    <div class="text-luxe text-6xl sm:text-7xl lg:text-8xl font-thin">
+      Winners
+    </div>
+    <div class="text-luxe text-6xl sm:text-7xl lg:text-8xl font-thin">{year}</div>
+    <a href="/" class="text-sm text-[#ffffff99] uppercase mt-8 hover:underline">See the winners</a>
+  </div>
 </div>

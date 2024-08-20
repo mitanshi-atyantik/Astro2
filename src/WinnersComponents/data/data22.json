@@ -1,0 +1,27 @@
+[
+    {
+        "id": "Hotel",
+        "imSrc1":"https://www.luxeglobalawards.com/images/92afda9cdc924ec0795e-sofitel_warsaw_victoria_exterior.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/0821618236331ceec80f-SWV3.jpg",
+        "place":"Poland",
+        "name":"SOFITEL WARSAW VICTORIA",
+        "desc":"Set in the very heart of Warsaw, among the capital's historic and cultural attractions, Sofitel Warsaw Victoria is a luxury hotel designed by Didier Gomez Studio. Elegant and modern guest rooms feature the comfortable Sofitel MyBed, a work desk and complimentary tea and coffee making facilities. Exclusive Balmain toiletries are provided in the bathroom. The contemporary lobby leads to the restaurant, La Brasserie Moderne, where the guests can try exquisite French and Polish cuisine or sample wine, champagne and local vodkas."
+        
+    }, {
+        "id": "Spa",
+        "imSrc1":"https://www.luxeglobalawards.com/images/8551c908d6ab3f6f8cf2-Cabinedouble2.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/816d05f3aa248e59f8e6-Spa_of_the_Year_.jpg",
+        "place":"France",
+        "name":"SYM BIOLOGIC SYSTEM SPA AT HÔTEL & SPA DU CASTELLET",
+        "desc":"Sym Biologic System is a French brand, expert in skin physiology, which provides concrete solutions, 100% effective, Ecocert certified, with clinically proven results. Sym Biologic System is a revolution because it was conceived without compromise on common sense, experience, efficiency and good for your health. A range of skin care products adapted to your concerns and your lifestyle. Your routine in 3 essential steps so that the good health of your skin can express itself, be seen, give you back ... A unique welcome, highly technical treatments, exceptional sensoriality and specific massage techniques that will mobilize your body's resources. Receiving a Sym Biologic System treatment means feeling a great sense of well-being and above all feeling that your body has woken up and is working for you. Sym Biologic System, you will love it because it works!"
+        
+    }, {
+        "id": "Restaurant",
+        "imSrc1":"https://www.luxeglobalawards.com/images/30d10c5073454d3a7b12-dobrograd.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/ea27d2bd5d37cb94d1d2-7U2A7464.jpg",
+        "place":"Russia",
+        "name":"DOBROGRAD",
+        "desc":"The main hall, a glazed veranda and a summer outdoor terrace are available for guests. The heart of the hall is a large interior fireplace. The maximum capacity is 80 seats. The planning solution provides transformation and an opportunity to hold various events: weddings, celebrations and presentations."
+        
+    }
+]

@@ -4,14 +4,126 @@ const {id} = Astro.props
 ---
 <div
 id={id}
-  class="fixed top-0 right-0 h-full bg-white border-l border-gray-300 shadow-lg w-0 transition-transform transform translate-x-full z-50 flex flex-col justify-center items-center p-20 space-y-6"
+  class="fixed top-0 right-0 h-full bg-white border-l border-gray-300 shadow-lg w-0 transition-transform transform translate-x-full z-50 flex flex-col justify-center items-center p-10 space-y-6"
 >
   <button id="close-registration-form" class="absolute top-4 right-4 text-2xl">×</button>
-  <h2 class="text-2xl font-semibold">Register</h2>
-  <form class="space-y-4">
-    <input type="text" placeholder="Name" class="border px-4 py-2 w-full" />
-    <input type="email" placeholder="Email" class="border px-4 py-2 w-full" />
-    <input type="text" placeholder="Phone" class="border px-4 py-2 w-full" />
-    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
-  </form>
+ <div class="container">
+        <div class="title">Enter the Awards</div>
+        <p class="description">Select the property type you want to enter the awards for:</p>
+        <div class="checkbox-group">
+            <input type="checkbox" id="property1" name="property" value="Property1" class="custom-checkbox">
+            <label for="property1">Hotel</label>
+            <input type="checkbox" id="property2" name="property" value="Property2" class="custom-checkbox">
+            <label for="property2">SPA</label>
+            <input type="checkbox" id="property3" name="property" value="Property3" class="custom-checkbox">
+            <label for="property3">Restaurant</label>
+            <input type="checkbox" id="property4" name="property" value="Property4" class="custom-checkbox">
+            <label for="property4">Agency</label>
+        </div>
+        <button class="continue-button">Continue</button>
+    </div>
 </div>
+
+
+
+<style>
+  .container {
+    padding-left: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+.checkbox-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.checkbox-group label {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 14px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0; /* Hide the native checkbox */
+}
+
+.custom-checkbox + label {
+    position: relative;
+    padding-left: 30px; /* Space for custom radio button */
+    cursor: pointer;
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px; /* Size of the custom radio button */
+    height: 15px; /* Size of the custom radio button */
+    border-radius: 50%; /* Circle shape */
+    border: 2px solid gray; /* Border color */
+    background-color: #fff; /* Background color */
+}
+
+.custom-checkbox:checked + label::before {
+    background-color: black; /* Checked background color */
+    border-color: black; /* Border color when checked */
+}
+
+.custom-checkbox:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px; /* Size of the inner dot */
+    height: 5px; /* Size of the inner dot */
+    border-radius: 50%; /* Circle shape */
+    background-color: white; /* Inner dot color */
+}
+
+.continue-button {
+    background-color: black;
+    width: 70%;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+        
+</style>

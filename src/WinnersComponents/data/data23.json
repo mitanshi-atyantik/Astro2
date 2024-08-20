@@ -1,0 +1,27 @@
+[
+    {
+        "id": "Hotel",
+        "imSrc1":"https://www.luxeglobalawards.com/images/e2d2c3700bd7bbeff371-fushifaru.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/d2682df686f79da51e29-Hotel_of_the_Year_Image.jpg",
+        "place":"Maldives",
+        "name":"Fushifaru maldives",
+        "desc":"On the far Northeast border of Lhaviyani Atoll, sits the new exquisite little island of Fushifaru Maldives, only a 35-minute breath-taking seaplane flight away from Velana International Airport. Nestled between a national Marine Protected Area and three of the Maldives’ most iconic dive sites, Fushifaru Maldives is a boutique and intimate resort with an endless promise of adventure, excitement, discovery, and serenity all in one diverse landscape. Dining experiences feature regional and international flavours to suit every taste and dietary requirement. Scrumptious breakfast buffets and palate pleasing international cuisine are offered at Korakali, while surf and turf can be savoured at Raakani on the beach and interactive dining experience can be enjoyed at Teppanyaki.Signature cocktails and detox tails are complemented by the best sunset views on the island whilst lounging by the pool at Fanihandhi Bar."
+        
+    }, {
+        "id": "Spa",
+        "imSrc1":"https://www.luxeglobalawards.com/images/1bfb471f13bacfc59212-rixos.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/816d05f3aa248e59f8e6-Spa_of_the_Year_.jpg",
+        "place":"Russia",
+        "name":"Rixos Royal Spa",
+        "desc":"Rixos Royal Spa offers a perfect world of harmony and beauty at an altitude of 960 meters above sea level. A relaxing atmosphere with a spectacular view of the mountain peaks and the unique landscape of pristine forests.On the ground floor there is an indoor pool 25 m long and 150 cm deep with two hydromassage bowls and a gorgeous view of the mountains, a Finnish sauna, a Russian sauna, a steam room, a vitamin bar with healthy drinks and a beauty salon. On the second floor there is the pearl of the spa - the Turkish hammam, relaxation areas, massage rooms and a suite for spa rituals for two persons, a professional gym with Technogym equipment, a fitness room for group exercises and a separate VIP suite with saunas, jacuzzi and ice hot tub for corporate and indivdual weekends. Pamper yourself and enjoy the day at the spa - there's plenty to keep you busy!"
+        
+    }, {
+        "id": "Restaurant",
+        "imSrc1":"https://www.luxeglobalawards.com/images/55f153fde10b9d242fc2-maya.jpg",
+        "imgSrc2":"https://www.luxeglobalawards.com/images/80c398252741184f26ed-Restaurant_of_the_Year.jpg",
+        "place":"India",
+        "name":"Villa Maya ( A Fabled Kitchen )",
+        "desc":"Villa Maya, a lovingly restored 18th century Dutch manor that once enjoyed the attention of the royal house of Travancore. In the spirit of its noble heritage it continues to exude timeless elegance through contemporary design and haute cuisine. The menu is a gastromonical journey through Kerala, India, Morocco and Italy. Each dish has been carefully handpicked for its cultural heritage, authenticity and resonance with the tastes of Kerala and is presented in a multisensory delight of exciting flavours, textures and aromas.Villa Maya is a treasure trove of subtle sensory delights; a theatre of the senses meticulously crafted to offer you an escape into serenity. Authentic traditional cuisines from around the world are exquisitely plated to harmonise with its classical architecture, minimal style and carefully selected art and craft pieces, creating an experience of beauty and grace."
+        
+    }
+]

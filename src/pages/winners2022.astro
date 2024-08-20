@@ -1,0 +1,22 @@
+---
+import Layout from "../Layout/Layout.astro";
+import Video2 from "../LuxeComponents/Video2.astro";
+import Oftheyear from "../WinnersComponents/Oftheyear.astro";
+import ShowcaseWinners from "../WinnersComponents/ShowcaseWinners.astro";
+import OverallWinners from '../WinnersComponents/OverallWinners.astro'
+import Overall2 from "../WinnersComponents/Overall2.astro";
+import Oftheyear2 from "../WinnersComponents/Oftheyear2.astro";
+import data22 from '../WinnersComponents/data/data22.json'
+
+
+---
+
+
+<Layout>
+    <ShowcaseWinners year="2022" rank="1st"/>
+    <Oftheyear2 data={data22}/>
+    <!-- <Oftheyear /> -->
+    <Video2 url="https://www.luxeglobalawards.com/assets/d4a247f6c27e1e604945-Chedy_LuxeAwards.mp4" />
+    <!-- <OverallWinners /> -->
+     <Overall2 data={data22}/>
+</Layout>

@@ -1,0 +1,45 @@
+---
+// import data from './data/data23.json'; // Adjust the path if necessary
+const {data} = Astro.props
+---
+
+<!-- Overall Winners -->
+<div class="flex items-center justify-center w-full bg-black text-white h-[60vh] pt-40">
+  <div class="flex flex-col items-center w-[80%] text-center">
+    <p></p>
+    <div class="text-overall text-6xl sm:text-7xl lg:text-8xl font-normal font-sans tracking-wide uppercase">
+      Overall
+    </div>
+    <div class="text-winners text-6xl sm:text-7xl lg:text-8xl font-thin uppercase">
+      Winners
+    </div>
+  </div>
+</div>
+
+<!-- Display Each Winner -->
+<div class="contain flex flex-col gap-36 p-12 text-[white] bg-[black] w-full">
+
+  {
+  data.map( (item, index) => 
+    <div class= {`component ${index % 2 === 0 ? '' : 'reverse'} h-full w-full flex flex-row justify-center items-center gap-[20px] ${index % 2 === 0 ? '' : 'flex-row-reverse [@media(max-width:768px)]:flex-col'} [@media(max-width:768px)]:flex-col`} >
+      <div class="description-column flex-[1] w-3/5 p-[20px] rounded-[8px] flex justify-center [@media(max-width:768px)]:w-full">
+        <div class="desc text-center flex flex-col w-4/5 [@media(max-width:768px)]:w-full">
+          <div class="heading flex justify-center items-center gap-[0.8rem] mb-4">
+            <div class="logo1 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/a30d6d664bbd8d70e325-awards-left-ico.svg')] bg-cover"></div>
+            <p class="text-center m-0 px-[0] py-[10px] relative uppercase text-[12px] text-[white]">
+              {item.id} of the year
+            </p>
+            <div class="logo2 h-6 w-4 bg-[url('https://www.luxeglobalawards.com/images/1292597e04db92596ba7-awards-right-ico.svg')] bg-cover"></div>
+          </div>
+          <span class="place text-[13px] uppercase text-[rgba(168,_165,_165,_0.945)] m-[0.8rem]">{item.place}</span>
+          <span class="place-name text-4xl uppercase text-[#ffffffe0]">{item.name}</span>
+          <p class="text-[13px] text-[gray] mt-4 mx-[0] mb-[10px]">{item.desc}</p>
+          <a href="#" class="text-[14px] text-[#636464] no-underline uppercase mx-[0] my-4 hover:underline">See the profile</a>
+        </div>
+      </div>
+      <img src={item.imgSrc2} alt={item.name} class="flex-[1] h-[30%] w-[30%] bg-cover bg-center [@media(max-width:768px)]:w-full [@media(max-width:768px)]:h-full"/>
+    </div>
+  )
+}
+</div>
+
