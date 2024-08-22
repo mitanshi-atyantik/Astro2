@@ -1,0 +1,24 @@
+---
+import Swiper from "./Swiper.astro";
+
+
+---
+
+
+<div class="latest-blogs ">
+    <div class="headings text-4xl mx-10 my-10 mt-20  uppercase text-[rgb(0,_0,_0)] [@media(max-width:767px)]:text-center">
+        <p class="heading1">Latest</p>
+        <p class="heading2 font-['Times_New_Roman',_Times,_serif] font-thin">Industry Insights</p>
+      </div>
+
+
+      <Swiper magazine={false}/>
+
+      <div class="read-all-blogs text-center mb-40">
+        <a href="/blogs/" class="text-[#978544] bg-white border border-[#978544] rounded-full py-4 px-6 uppercase transition-opacity duration-300 hover:opacity-100 hover:bg-[#978544] hover:text-white hover:cursor-pointer text-sm">
+            Read all Insights
+          </a>
+      </div>
+
+      
+</div>

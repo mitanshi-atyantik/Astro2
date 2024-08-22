@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom Styles */
+      .swiper-container {
+        margin-top: 50px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh; /* Adjust height as needed */
+        font-size: 18px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 21px;
+        height: 21px;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .swiper-button-prev {
+        margin-left: 50px;
+        left: 20px; /* Position to the left */
+      }
+
+      .swiper-button-next {
+        margin-right: 50px;
+        right: 10px; /* Position to the right */
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+
+      .swiper-button-prev::before,
+      .swiper-button-next::before {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none;
+      }
+
+      .swiper-button-prev {
+        left: auto;
+        margin-right: 90px;
+        background-image: url("https://www.luxeglobalawards.com/images/85e760e3884bf2284700-left-arrow.svg");
+        width: 30px;
+      }
+
+      .swiper-button-next {
+        background-image: url("https://luxeglobalawards.com/images/4850e96552447a566dad-right-arrow.svg");
+        width: 30px;
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.2;
+      }
+
+      .container {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .item {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 25%;
+  aspect-ratio: 2/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow: hidden; /* Hide overflow if image is larger */
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Preserve aspect ratio and fit the image */
+}
+
+     
+      @media (max-width: 768px) {
+        .item {
+          flex: 1 1 calc(50% - 20px); /* For 2 items per row with gap considered */
+        }
+
+        .swiper-button-prev {
+          margin-left: 10px;
+          left: 10px; /* Position to the left */
+        }
+
+        .swiper-button-next {
+          margin-right: 10px;
+          right: 10px; /* Position to the right */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="container">
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/yDkYuZMa4xxptuwIU7R44sWlvDgWJpjH-Logo%20Pullman%20Lubumbashi.png"
+                alt=""
+              /></a
+            >
+
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/RdIYYPILAYfEkb4GdPxaAk4wL0NrVCYO-150x150_Movenpick%20Grand%20Al%20Bustan-01.png"
+                alt=""
+              /></a
+            >
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/yDkYuZMa4xxptuwIU7R44sWlvDgWJpjH-Logo%20Pullman%20Lubumbashi.png"
+                alt=""
+              /></a
+            >
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/yDkYuZMa4xxptuwIU7R44sWlvDgWJpjH-Logo%20Pullman%20Lubumbashi.png"
+                alt=""
+              /></a
+            >
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/yDkYuZMa4xxptuwIU7R44sWlvDgWJpjH-Logo%20Pullman%20Lubumbashi.png"
+                alt=""
+              /></a
+            >
+            <a href="/" class="item"
+              ><img
+                src="https://cdn.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/production/yDkYuZMa4xxptuwIU7R44sWlvDgWJpjH-Logo%20Pullman%20Lubumbashi.png"
+                alt=""
+              /></a
+            >
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js";
+
+      // Initialize Swiper
+      const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 0, // No space between slides
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

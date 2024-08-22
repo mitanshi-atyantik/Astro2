@@ -1,0 +1,40 @@
+---
+const { hotel1, hotel2, hotel3, hotel4, hotel5, hotel6 } = Astro.props;
+---
+
+<div class="container">
+  <a href="/" class="item"><img src={hotel1} alt="" /></a>
+  <a href="/" class="item"><img src={hotel2} alt="" /> </a>
+  <a href="/" class="item"><img src={hotel3} alt="" /></a>
+  <a href="/" class="item"><img src={hotel4} alt="" /></a>
+  <a href="/" class="item"><img src={hotel5} alt="" /></a>
+  <a href="/" class="item"><img src={hotel6} alt="" /></a>
+</div>
+
+<style>
+  .container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .item {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    width: 25%;
+    aspect-ratio: 2/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    overflow: hidden; /* Hide overflow if image is larger */
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Preserve aspect ratio and fit the image */
+  }
+</style>

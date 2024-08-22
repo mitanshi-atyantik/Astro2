@@ -1,0 +1,45 @@
+
+[
+    {
+        "date": "2024-08-21",
+        "title": "EARTH FRIENDLY ELEGANCE",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/2487c054a2bc6b780691-33.png",
+        "slug":""
+    },
+    {
+        "date": "2024-08-20",
+        "title": "GOURMET GEMS",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/1ff9ef6b50ba37504060-27.png",
+        "slug": "javascript-tips-and-tricks"
+    },
+    {
+        "date": "2024-08-19",
+        "title": "STEP INTO SERENITY",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/04e9b65ac1dbd1bd87b1-31.png",
+        "slug": "css-grid-layout-guide"
+    },
+    {
+        "date": "2024-08-18",
+        "title": "WILD AFRICA",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/b79e3dd320a248899847-30.png",
+        "slug": "understanding-flexbox"
+    },
+    {
+        "date": "2024-08-17",
+        "title": "RESOURCE REDIFINED",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/32ed8b7e3b67300bdbf9-29.png",
+        "slug": "introduction-to-web-accessibility"
+    },
+    {
+        "date": "2024-08-16",
+        "title": "BUSINESS MEETS HOSPITALITY",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/7c09242184bf2aae8d4c-28.png",
+        "slug": "building-responsive-websites"
+    },
+    {
+        "date": "2024-08-15",
+        "title": "CULINARY LOVE AND TRANQUILS RETREATS",
+        "imgSrc": "https://www.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/images/1ff9ef6b50ba37504060-27.png",
+        "slug": "seo-best-practices"
+    }
+]

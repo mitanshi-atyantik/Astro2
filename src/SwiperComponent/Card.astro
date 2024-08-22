@@ -1,0 +1,12 @@
+---
+const {date, title, imgSrc, slug} = Astro.props
+---
+
+
+
+<div class="overflow-hidden text-left p-4">
+    <div class="text-sm text-[gray] mb-2">{date}</div>
+    <div class="text-lg text-black mb-4">{title}</div>
+    <img src={imgSrc} alt="Hotel Image 1" class="w-full aspect-[2/1] mb-2 object-cover  max-w-md"  >
+    <a href=`/bolg/${slug}` class="text-sm text-black underline ">Read More</a>
+</div>

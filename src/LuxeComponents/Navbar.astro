@@ -4,7 +4,7 @@ import RegistrationForm from "./RegistrationForm.astro";
 ---
 
 <nav
-  class="sm:hidden bg-white border-b border-gray-300 py-2 px-8 md:flex justify-between items-center uppercase hidden "
+  class="sm:hidden bg-white border-b border-gray-300 py-2 px-8 md:flex justify-between items-center uppercase hidden fixed top-0 left-0 w-full z-20" id="navbar"
 >
   
   <div class="flex items-center space-x-6">
@@ -28,12 +28,12 @@ import RegistrationForm from "./RegistrationForm.astro";
         >
       </div>
     </div>
-    <a href="/about" class="text-black text-xs px-4"
+    <a href="/about-us" class="text-black text-xs px-4"
       >About the Awards</a
     >
   </div>
 
-  <div class="flex-grow flex justify-center items-center">
+  <div class="flex-grow flex justify-center items-center overflow-hidden">
     <a href="/" class="flex items-center">
       <img
         src="https://www.luxeglobalawards.com/images/371a297a15fb1e72fb59-logo.svg"
@@ -48,7 +48,7 @@ import RegistrationForm from "./RegistrationForm.astro";
     <a href="/explore" class="text-black text-xs px-4"
       >Explore</a
     >
-    <a href="/contact" class="text-black text-xs px-4"
+    <a href="/contact-us" class="text-black text-xs px-4"
       >Contact</a
     >
     <Button title="Register" className="register-button" />
@@ -100,11 +100,11 @@ import RegistrationForm from "./RegistrationForm.astro";
         >Winners</a>
     </li>
     <li>
-      <a href="/about" class="block text-black text-lg"
+      <a href="/about-us" class="block text-black text-lg"
         >About the Awards</a>
     </li>
     <li>
-      <a href="/contact" class="block text-black text-lg"
+      <a href="/contact-us" class="block text-black text-lg"
         >Contact</a>
     </li>
     <li>
@@ -212,3 +212,22 @@ import RegistrationForm from "./RegistrationForm.astro";
     
   });
 </script>
+
+
+<script>
+  window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) { 
+        navbar.classList.add('navbar-shrink');
+      } else {
+        navbar.classList.remove('navbar-shrink');
+      }
+    });
+</script>
+
+
+<style>
+   .navbar-shrink {
+      height: 60px; /* Adjust this value as needed */
+    }
+</style>

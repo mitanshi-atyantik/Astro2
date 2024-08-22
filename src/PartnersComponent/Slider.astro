@@ -1,0 +1,113 @@
+---
+import hotels from './hotels.json'
+import Slide from './Slide.astro'
+
+const {property} = Astro.props
+---
+
+<div class="heading text-4xl mt-14 uppercase text-black text-center">
+  <p>{property} Partners</p>
+  </div>
+
+<div class="swiper-container relative overflow-hidden w-full">
+    <div class="swiper-wrapper flex">
+        {
+            hotels.map((hotel, idx) => (
+                <div class="swiper-slide flex justify-center items-center h-[70vh] text-lg">
+                    <Slide hotel1={hotel.hotel1} hotel2={hotel.hotel2} hotel3={hotel.hotel3} hotel4={hotel.hotel4} hotel5={hotel.hotel5} hotel6={hotel.hotel6}/>
+                </div>
+            ))
+        }
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev absolute top-1/2 transform -translate-y-1/2 left-5 w-[21px] h-[21px] bg-center bg-no-repeat bg-cover cursor-pointer"></div>
+    <div class="swiper-button-next absolute top-1/2 transform -translate-y-1/2 right-5 w-[21px] h-[21px] bg-center bg-no-repeat bg-cover cursor-pointer"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js";
+
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper-container", {
+      slidesPerView: 1, // Show one slide at a time
+      spaceBetween: 0, // No space between slides
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
+
+
+
+<style>
+    /* Custom Styles */
+   
+   
+  
+    
+    .swiper-button-prev {
+      margin-left: 50px;
+      left: 20px; /* Position to the left */
+    }
+  
+    .swiper-button-next {
+      margin-right: 50px;
+      right: 10px; /* Position to the right */
+    }
+  
+    .swiper-button-disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+  
+    .swiper-button-prev::before,
+    .swiper-button-next::before {
+      content: "";
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+    }
+  
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: none;
+    }
+  
+    .swiper-button-prev {
+      left: auto;
+      margin-right: 90px;
+      background-image: url("https://www.luxeglobalawards.com/images/85e760e3884bf2284700-left-arrow.svg");
+      width: 30px;
+    }
+  
+    .swiper-button-next {
+      background-image: url("https://luxeglobalawards.com/images/4850e96552447a566dad-right-arrow.svg");
+      width: 30px;
+    }
+  
+    .swiper-button-disabled {
+      opacity: 0.2;
+    }
+  
+   
+  
+    @media (max-width: 768px) {
+      .item {
+        flex: 1 1 calc(50% - 20px); /* For 2 items per row with gap considered */
+      }
+  
+      .swiper-button-prev {
+        margin-left: 10px;
+        left: 10px; /* Position to the left */
+      }
+  
+      .swiper-button-next {
+        margin-right: 10px;
+        right: 10px; /* Position to the right */
+      }
+    }
+  </style>

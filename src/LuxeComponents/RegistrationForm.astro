@@ -7,64 +7,27 @@ id={id}
   class="fixed top-0 right-0 h-full bg-white border-l border-gray-300 shadow-lg w-0 transition-transform transform translate-x-full z-50 flex flex-col justify-center items-center p-10 space-y-6"
 >
   <button id="close-registration-form" class="absolute top-4 right-4 text-2xl">×</button>
- <div class="container">
-        <div class="title">Enter the Awards</div>
-        <p class="description">Select the property type you want to enter the awards for:</p>
-        <div class="checkbox-group">
+ <div class="container pl-8 bg-[#ffffff] rounded-[8px] flex flex-col justify-center items-center w-full">
+        <div class="title text-[3rem] w-3/5 text-center mb-4">Enter the Awards</div>
+        <p class="description text-[14px] mb-12">Select the property type you want to enter the awards for:</p>
+        <div class="checkbox-group w-full flex justify-center flex-wrap mb-16">
             <input type="checkbox" id="property1" name="property" value="Property1" class="custom-checkbox">
-            <label for="property1">Hotel</label>
+            <label for="property1" class="mx-[10px] my-[0] flex items-center text-[gray] text-[14px]">Hotel</label>
             <input type="checkbox" id="property2" name="property" value="Property2" class="custom-checkbox">
-            <label for="property2">SPA</label>
+            <label for="property2" class="mx-[10px] my-[0] flex items-center text-[gray] text-[14px]">SPA</label>
             <input type="checkbox" id="property3" name="property" value="Property3" class="custom-checkbox">
-            <label for="property3">Restaurant</label>
+            <label for="property3" class="mx-[10px] my-[0] flex items-center text-[gray] text-[14px]">Restaurant</label>
             <input type="checkbox" id="property4" name="property" value="Property4" class="custom-checkbox">
-            <label for="property4">Agency</label>
+            <label for="property4" class="mx-[10px] my-[0] flex items-center text-[gray] text-[14px]">Agency</label>
         </div>
-        <button class="continue-button">Continue</button>
+        <button class="continue-button bg-[black] w-[70%] text-[white] border-[none] px-[20px] py-[10px] text-[16px] cursor-pointer rounded-[25px] [transition:background-color_0.3s_ease] hover:bg-[white] hover:text-[black] hover:border-[1px] hover:border-[solid] hover:border-[black]">Continue</button>
     </div>
 </div>
 
 
 
 <style>
-  .container {
-    padding-left: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
 
-.title {
-    font-size: 3rem;
-    width: 60%;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.description {
-    font-size: 14px;
-    margin-bottom: 3rem;
-}
-
-.checkbox-group {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-}
-
-.checkbox-group label {
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    color: gray;
-    font-size: 14px;
-}
 
 .custom-checkbox {
     position: absolute;
@@ -107,23 +70,7 @@ id={id}
     background-color: white; /* Inner dot color */
 }
 
-.continue-button {
-    background-color: black;
-    width: 70%;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
 
-.continue-button:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
 
         
 </style>

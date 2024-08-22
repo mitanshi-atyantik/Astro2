@@ -1,0 +1,138 @@
+---
+import blogdata from "./blogdata.json";
+import magazinedata from './magazinedata.json'
+import Card from "./Card.astro";
+import MagazineCard from "./MagazineCard.astro";
+
+const blogs = await Astro.glob('../blogs/*.md')
+const {magazine} = Astro.props
+---
+
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      { magazine ? magazinedata.map((data, idx) => (
+        <div class="swiper-slide">
+          <MagazineCard title={data.title} date={data.date} imgSrc={data.imgSrc} />
+        </div>
+      ))
+
+      :
+
+        blogdata.map((data, idx) => (
+          <div class="swiper-slide">
+            <Card title={data.title} date={data.date} imgSrc={data.imgSrc} />
+          </div>
+        ))
+      }
+
+      <!-- {
+          blogs.map((data, idx) => (
+            <div class="swiper-slide">
+              <Card title={data.frontmatter.title} date={data.frontmatter.date} imgSrc={data.frontmatter.imgSrc} slug={data.frontmatter.slug}/>
+            </div>
+          ))
+        } -->
+      
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Swiper from "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js";
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper-container", {
+      slidesPerView: "auto", // Automatically adjust based on slide width
+      spaceBetween: 60, // Space between slides
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+
+<style>
+     /* Custom Styles */
+     .swiper-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .swiper-wrapper {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        margin-left: 30px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        width: 25%; /* Adjust the width to fit your design */
+        height: auto;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 20px 50px 0 0;
+        transition: 0.2s all ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 21px;
+        height: 21px;
+      }
+
+      .swiper-button-prev::before,
+      .swiper-button-next::before {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+      }
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none;
+      }
+
+      .swiper-button-prev {
+        left: auto;
+        margin-right: 90px;
+        background-image: url("https://www.luxeglobalawards.com/images/85e760e3884bf2284700-left-arrow.svg");
+        width: 30px;
+      }
+
+      .swiper-button-next {
+        background-image: url("https://luxeglobalawards.com/images/4850e96552447a566dad-right-arrow.svg");
+        width: 30px;
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.2;
+      }
+
+      @media (max-width:768px){
+        .swiper-slide {
+            width: 40%;
+        }
+      }
+      @media (max-width:450px){
+        .swiper-slide {
+            width: 60%;
+        }
+      }
+</style>
