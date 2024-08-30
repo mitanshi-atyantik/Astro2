@@ -1,3 +1,10 @@
+---
+import AnimateComponent from "../animation/AnimateComponent.astro";
+import Animation from "../pages/animation.astro";
+
+
+---
+<AnimateComponent>
 <footer class="footer py-8">
   <div class="footer-container container mx-auto flex justify-between px-4 [@media(max-width:768px)]:flex-col [@media(max-width:768px)]:items-center">
     
@@ -14,40 +21,48 @@
     <div class="footer-links-container flex flex-wrap gap-4 w-3/4 [@media(max-width:768px)]:flex-col [@media(max-width:768px)]:items-center">
       
       <div class="footer-column flex-1 min-w-[150px] [@media(max-width:768px)]:mx-[0] [@media(max-width:768px)]:my-[0rem] [@media(max-width:768px)]:text-center">
+        
         <ul class="space-y-2">
           <li><a href="/blogs" class="text-gray-800 text-xs uppercase">Industry Insights</a></li>
           <li><a href="/explore" class="text-gray-800 text-xs uppercase">Browse</a></li>
           <li><a href="/press" class="text-gray-800 text-xs uppercase">Press</a></li>
           <li><a href="/shop" class="text-gray-800 text-xs uppercase">Shop</a></li>
         </ul>
+     
       </div>
 
       
       <div class="footer-column flex-1 min-w-[150px] [@media(max-width:768px)]:mx-[0] [@media(max-width:768px)]:my-[0rem] [@media(max-width:768px)]:text-center">
+        
         <ul class="space-y-1">
           <li><a href="/about-us" class="text-gray-800 text-xs uppercase">About the awards</a></li>
           <li><a href="/contact-us" class="text-gray-800 text-xs uppercase">Contact</a></li>
           <li><a href="/partners" class="text-gray-800 text-xs uppercase">Partners</a></li>
         </ul>
+      
       </div>
 
       
       <div class="footer-column flex-1 min-w-[150px] [@media(max-width:768px)]:mx-[0] [@media(max-width:768px)]:my-[0rem] [@media(max-width:768px)]:text-center">
+        
         <ul class="space-y-4">
           <li class="text-gray-800 text-xs uppercase">Capetown <br> South Africa</li>
           <li><a href="mailto:info@luxeglobalawards.com" class="text-gray-800 text-xs uppercase">info@luxeglobalawards.com</a></li>
         </ul>
+    
       </div>
     </div>
   </div>
 
   <div class="copy-right mt-24 [@media(max-width:768px)]:mt-5">
+    
     <ul class="flex justify-end items-center gap-8 pr-24 [@media(max-width:600px)]:flex-col [@media(max-width:600px)]:gap-0 [@media(max-width:768px)]:pr-0 [@media(max-width:768px)]:justify-center">
       <p class="text-gray-500 text-xs uppercase">Luxe Global 2024</p>
       <li><a href="#" class="text-gray-500 text-xs uppercase">Terms and conditions</a></li>
       <li><a href="#" class="text-gray-500 text-xs uppercase">Privacy policy</a></li>
       <li><a href="#" class="text-gray-500 text-xs uppercase">Powered by Atyantik</a></li>
     </ul>
+  
   </div>
 </footer>
-
+</AnimateComponent>

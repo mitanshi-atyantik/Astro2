@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Container</title>
+  <style>
+    /* Ensure full viewport height and width */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  overflow: hidden; /* Hide any overflow from the image */
+}
+
+.image {
+  top: 50%;
+  left: 50%;
+  min-width: 100vw; /* Ensure image width covers viewport */
+  min-height: 100vh; /* Ensure image height covers viewport */
+}
+
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="images/1.jpg" alt="Sample Image" class="image">
+  </div>
+</body>
+</html>

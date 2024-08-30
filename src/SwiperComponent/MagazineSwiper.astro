@@ -1,4 +1,5 @@
 ---
+import AnimateComponent from "../animation/AnimateComponent.astro";
 import Swiper from "./Swiper.astro";
 
 
@@ -6,10 +7,12 @@ import Swiper from "./Swiper.astro";
 
 
 <div class="latest-blogs ">
+  <AnimateComponent>
     <div class="headings text-4xl mx-10 my-10 mt-20  uppercase text-[rgb(0,_0,_0)] [@media(max-width:767px)]:text-center">
         <p class="heading1">Latest</p>
         <p class="heading2 font-['Times_New_Roman',_Times,_serif] font-thin">Magazines</p>
       </div>
+    </AnimateComponent>
 
 
       <Swiper magazine={true}/>

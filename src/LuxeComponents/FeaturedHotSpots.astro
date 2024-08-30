@@ -1,11 +1,20 @@
+---
+import AnimateComponent from "../animation/AnimateComponent.astro";
+
+
+---
+
 <div class="container relative w-full aspect-[2/1]">
     <div class="background-wrapper absolute top-[0] left-[0] w-full h-full overflow-hidden">
         <img src='/images/1.jpg' alt="Background Image" class="background-image absolute top-0 left-0 w-full h-auto min-h-full">
         <div class="overlay absolute top-[0] left-[0] w-full h-full bg-[rgba(0,_0,_0,_0.5)]"></div>
     </div>
+    
     <div class="text absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-[white] text-center px-4 py-[0]">
+      <AnimateComponent>
         <div class="one uppercase text-[2.5rem] font-medium [@media(max-width:768px)]:text-[2rem] [@media(max-width:480px)]:text-[1.5rem]">Featured</div>
         <div class="two uppercase text-[2.2rem] font-normal [@media(max-width:768px)]:text-[1.8rem] [@media(max-width:480px)]:text-[1.4rem] [@media(max-width:480px)]:px-2 [@media(max-width:480px)]:py-[0]">Hot Spots</div>
+      </AnimateComponent>
     </div>
 </div>
 

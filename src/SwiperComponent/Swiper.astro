@@ -3,13 +3,14 @@ import blogdata from "./blogdata.json";
 import magazinedata from './magazinedata.json'
 import Card from "./Card.astro";
 import MagazineCard from "./MagazineCard.astro";
+import AnimateComponent from "../animation/AnimateComponent.astro";
 
 const blogs = await Astro.glob('../blogs/*.md')
 const {magazine} = Astro.props
 ---
 
 
-
+<AnimateComponent>
 <div class="swiper-container">
     <div class="swiper-wrapper">
       { magazine ? magazinedata.map((data, idx) => (
@@ -40,7 +41,7 @@ const {magazine} = Astro.props
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-
+</AnimateComponent>
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -1,0 +1,168 @@
+---
+import img2 from "../../public/images/2.jpg";
+import img3 from "../../public/images/3.jpg";
+import img4 from "../../public/images/4.jpg";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Feature</title>
+    <style>
+      .home-feat-banner-img::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.5); /* Assuming $black is #000 */
+        z-index: 20;
+      }
+
+      @media screen and (max-width: 767px) {
+        .home-feat-banner-img {
+          width: 100%;
+          height: 30vh;
+        }
+        .home-feat-banner-img img {
+          max-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        .home-feat-banner-img figcaption {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1025px) {
+        .home-feat-rest-list {
+          position: relative;
+          padding: 40px 60px;
+          width: 100%;
+          height: 100%;
+          transform: none !important;
+        }
+
+        .home-feat-rest-list li {
+          height: auto;
+          padding: 0;
+          margin: 40px 0 80px;
+        }
+
+        .home-feat-rest-list li:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="home-feature-section w-full relative z-10">
+      <figure
+        class="home-feat-banner-img w-full relative m-0 p-0 h-screen overflow-hidden z-10"
+      >
+        <img
+          src="images/1.jpg"
+          alt="Featured Hub Spots"
+          class="img absolute top-[0] left-[0] w-full h-full z-10 max-w-full min-w-[100vw] min-h-screen object-cover object-center"
+        />
+        <figcaption
+          class="absolute top-[0] left-[0] w-full h-full z-30 text-[#fff] flex flex-col items-center justify-center"
+        >
+        <div class="text absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-[white] text-center px-4 py-[0]">
+          
+            <div class="one uppercase text-[2.5rem] font-medium [@media(max-width:768px)]:text-[2rem] [@media(max-width:480px)]:text-[1.5rem]">Featured</div>
+            <div class="two uppercase text-[2.2rem] font-normal [@media(max-width:768px)]:text-[1.8rem] [@media(max-width:480px)]:text-[1.4rem] [@media(max-width:480px)]:px-2 [@media(max-width:480px)]:py-[0]">Hot Spots</div>
+          
+        </div>
+        </figcaption>
+      </figure>
+      <div class="home-feat-list-contain flex items-start justify-center">
+        <ul
+          class="home-feat-rest-list flex flex-col items-center gap-12 w-[67vw] h-screen overflow-hidden absolute right-[0] top-[0] [list-style:none]"
+        >
+          <li
+            class="overflow-hidden text-left p-4 flex flex-col justify-center h-[calc(100vh - 58px)] p-[30%]"
+          >
+            <div class="text-xs text-black mb-2">HOTEL/</div>
+            <div class="text-xs text-black mb-2">GREECE</div>
+            <img
+              src={img2.src}
+              alt="Hotel Image 1"
+              class="w-full h-auto mb-2 object-cover aspect-square max-w-md block"
+            />
+            <div class="text-lg mb-8">AQUILA ELOUNDA VILLAGE</div>
+            <a href="#" class="text-sm text-black underline">Read More</a>
+          </li>
+          <li
+            class="overflow-hidden text-left p-4 flex flex-col justify-center h-[calc(100vh - 58px)] p-[30%]"
+          >
+            <div class="text-xs text-black mb-2">SPA/</div>
+            <div class="text-xs text-black mb-2">THAILAND</div>
+            <img
+              src={img3.src}
+              alt="Hotel Image 2"
+              class="w-full h-auto mb-2 object-cover aspect-square max-w-md block"
+            />
+            <div class="text-lg mb-8">
+              QUAN SPA AT CHAING MAI <br /> MARRIOTT HOTEL
+            </div>
+            <a href="#" class="text-sm text-black underline">Read More</a>
+          </li>
+          <li
+            class="overflow-hidden text-left p-4 flex flex-col justify-center h-[calc(100vh - 58px)] p-[30%]"
+          >
+            <div class="text-xs text-black mb-2">RESTAURANT/</div>
+            <div class="text-xs text-black mb-2">TURKEY</div>
+            <img
+              src={img4.src}
+              alt="Hotel Image 3"
+              class="w-full h-auto mb-2 object-cover aspect-square max-w-md block"
+            />
+            <div class="text-lg mb-8">AQUAMARINE RESTAURANT</div>
+            <a href="#" class="text-sm text-black underline">Read More</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script type="module">
+  // Ensure GSAP and ScrollTrigger are loaded
+  import { gsap } from "https://cdn.skypack.dev/gsap";
+  import ScrollTrigger from "https://cdn.skypack.dev/gsap/ScrollTrigger";
+
+  // scripts.js
+
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.matchMedia({
+      "(min-width: 1025px)": () => {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            id: "home-feature",
+            trigger: ".home-feature-section",
+            start: "top 58px",
+            end: "+=300%",
+            pin: true,
+            scrub: 0.1,
+          },
+        });
+
+        timeline
+          .to(".home-feat-banner-img", {
+            width: "33vw",
+          })
+          .to(".home-feat-rest-list li", {
+            yPercent: -200,
+          });
+      },
+    });
+  });
+</script>

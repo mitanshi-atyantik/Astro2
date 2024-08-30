@@ -1,9 +1,17 @@
+---
+import AnimateComponent from "../animation/AnimateComponent.astro";
+
+
+---
+
+
 <div class="relative w-full aspect-[2/1]">
   <img
     src="https://www.luxeglobalawards.com/cdn-cgi/image/width=1440,fit=contain,quality=85,format=auto/images/fb6eda6a7f5ae9125aee-portfolioBG.jpg"
     alt="Background Image"
     class="w-full h-full object-cover"
   />
+  <AnimateComponent>
   <div
     class="absolute bottom-4 left-4 flex lg:flex-row lg:bottom-16 lg:left-24 sm:flex-col sm:gap-2 lg:gap-4"
   >
@@ -21,4 +29,5 @@
       View Online
     </a>
   </div>
+</AnimateComponent>
 </div>

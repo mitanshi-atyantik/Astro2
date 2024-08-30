@@ -1,3 +1,11 @@
+---
+import AnimateComponent from "../animation/AnimateComponent.astro";
+
+
+---
+
+
+
 <!-- FoundGem -->
 
 
@@ -6,12 +14,14 @@
        style="background-image: url('https://www.luxeglobalawards.com/images/98af9ae2aed12a152bc9-HKTNB_Swimming_Pool.jpg');">
     <div class="overlay absolute top-0 left-0 w-65 h-full bg-custom-gradient flex justify-center items-center text-white pr-20 md:pr-4 sm:pr-2">
       <div class="content w-1/2 text-center">
+        <AnimateComponent>
         <p class="text-4xl mb-4 uppercase md:text-4xl sm:text-xl">
           Found a gem <span class="block">we should know about?</span>
         </p>
         <button class="bg-transparent border-2 border-white text-white py-3 px-6 text-sm rounded-full uppercase transition-colors duration-300 hover:bg-white hover:text-black md:py-2 md:px-4 md:text-xs sm:py-1 sm:px-2">
           Let us Know
         </button>
+      </AnimateComponent>
       </div>
     </div>
   </div>
