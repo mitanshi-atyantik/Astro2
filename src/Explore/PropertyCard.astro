@@ -1,0 +1,16 @@
+---
+const { slug, type, title, image } = Astro.props;
+console.log(image)
+---
+<a href={`/hotels/${slug}`}>
+<div class="property-card">
+  <img src={image} alt={title} class="w-60 aspect-square"/>
+  <div class="property-info">
+    <span class="property-type">{type}</span>
+    <h2>{title}</h2>
+    
+  </div>
+</div>
+</a>
+
+

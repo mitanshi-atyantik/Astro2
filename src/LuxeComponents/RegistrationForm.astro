@@ -20,7 +20,7 @@ id={id}
             <input type="checkbox" id="property4" name="property" value="Property4" class="custom-checkbox">
             <label for="property4" class="mx-[10px] my-[0] flex items-center text-[gray] text-[14px]">Agency</label>
         </div>
-        <button class="continue-button bg-[black] w-[70%] text-[white] border-[none] px-[20px] py-[10px] text-[16px] cursor-pointer rounded-[25px] [transition:background-color_0.3s_ease] hover:bg-[white] hover:text-[black] hover:border-[1px] hover:border-[solid] hover:border-[black]">Continue</button>
+        <button id="continue-button" class="continue-button bg-[black] w-[70%] text-[white] border-[none] px-[20px] py-[10px] text-[16px] cursor-pointer rounded-[25px] [transition:background-color_0.3s_ease] hover:bg-[white] hover:text-[black] hover:border-[1px] hover:border-[solid] hover:border-[black]">Continue</button>
     </div>
 </div>
 
@@ -74,3 +74,31 @@ id={id}
 
         
 </style>
+
+<script>
+
+      const continueButton = document.getElementById('continue-button');
+      const closeButton = document.getElementById('close-registration-form');
+      const modal = document.getElementById('<%= id %>'); // Adjust this according to your modal hide logic
+  
+      if (continueButton) {
+        continueButton.addEventListener('click', function () {
+          console.log("Continue button clicked");
+  
+          const checkboxes = document.querySelectorAll<HTMLInputElement>('.custom-checkbox');
+          const anyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+  
+          if (!anyChecked) {
+            alert('Please select at least one property type.');
+          } else {
+            // Redirect to the registration page
+            window.location.href = '/register'; // Adjust the URL as needed
+          }
+        });
+      } else {
+        console.error('Continue button not found');
+      }
+  
+     
+   
+  </script>
