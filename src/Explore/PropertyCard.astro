@@ -14,3 +14,33 @@ console.log(image)
 </a>
 
 
+<!-- ------------------------------ -->
+
+
+<!-- ---
+import PropertyCard from './PropertyCard.astro';
+const properties = await Astro.glob('./properties/*.md')
+---
+
+  <h1>Explore</h1>
+  <div class="property-list">
+    <div class="flex items-center justify-between mx-32 my-10">
+    {properties.map((property) => { 
+        const {slug, type, title, image} = property.frontmatter;
+return (
+
+       
+
+        
+      <PropertyCard
+        key={slug}
+        slug={slug}
+        type={type}
+        title={title}
+        image={image}
+      />
+      
+      ) }
+    )}
+    </div>
+  </div> -->

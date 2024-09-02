@@ -1,29 +1,181 @@
-
 ---
-import PropertyCard from './PropertyCard.astro';
+import { useState } from "react";
+import properties from './properties.json'
 
-const properties = await Astro.glob('./properties/*.md')
+// Dummy data (you can replace this with dynamic data later)
+const dummyData = Array.from({ length: 14 }, (_, i) => ({
+  id: i + 1,
+  title: `Card ${i + 1}`,
+  description: `Description for card ${i + 1}`,
+  imageUrl: `https://via.placeholder.com/300x200?text=Card+${i + 1}`,
+  type: 'restaurent' // Placeholder image URL
+}));
 ---
 
-  <h1>Explore</h1>
-  <div class="property-list">
-    <div class="flex items-center justify-between mx-32 my-10">
-    {properties.map((property) => { 
-        const {slug, type, title, image} = property.frontmatter;
-return (
-
-       
-
+<section class="py-32">
+  
+    <div class="heading flex flex-col items-center justify-center gap-7 py-4">
+      <span class="text-5xl uppercase">explore</span>
+      <span class="text-base uppercase">Where luxury resides</span>
+    </div>
+  
+  <div class="contain mx-10 w-full px-10">
+    
+    <div class="content px-8 py-4">
+      <div class="search-container px-4 flex items-center gap-2 border-b border-black py-3 mt-5">
+        <button class="w-4">
+          <img src="https://www.luxeglobalawards.com/images/ef2b5936c5d16300adb3-search.svg" alt="search">
+        </button>
+        <label for="search"></label>
+        <input id="search" type="text" placeholder="SEARCH BY COUNTRY OR NAME..." class="text-sm w-full focus:outline-none text-black">
         
-      <PropertyCard
-        key={slug}
-        slug={slug}
-        type={type}
-        title={title}
-        image={image}
-      />
-      
-      ) }
-    )}
+      </div>
+      <div class="checkboxes px-4  flex items-center gap-4 py-5 text-sm text-gray-500">
+        <label class="flex items-center gap-2"><input type="checkbox" /> Hotels</label>
+        <label class="flex items-center gap-2"><input type="checkbox" /> Restaurants</label>
+        <label class="flex items-center gap-2"><input type="checkbox" /> SPAs</label>
+        <label class="flex items-center gap-2"><input type="checkbox" /> Agencies</label>
+      </div>
+     <div class="cards-container "> 
+        {
+          properties.map((property) => (
+            <div class="card mb-14">
+              <div class="card-image-wrapper">
+                <img src={property.imageUrl} alt={property.name} class="card-image" />
+                <div class="property-label uppercase">{property.type}</div> 
+              </div>
+             
+              <span class="text-sm uppercase my-3">{property.country}</span>
+              <p class="text-sm uppercase">{property.name}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+  }
+
+  /* Heading Styles */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .content{
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  /* Cards Container Styles */
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+ 
+  }
+
+  /* Card Styles */
+  .card {
+
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 1rem;
+    width: calc(25% - 0.7rem);
+    box-sizing: border-box;
+  }
+
+  /* Card Image Styles */
+
+  .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    overflow: hidden; /* Hide overflow to keep the card layout clean */
+    border-radius: 10px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    transform-origin: center; /* Scale from center */
+    border-radius: 10px;
+  }
+
+  .property-label {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background-color: rgb(212, 104, 72); /* Semi-transparent background */
+  color: #fff;
+  padding: 0 5px;
+  font-size: 1em;
+}
+
+  .card-image:hover {
+    transform: scale(1.05); /* Slightly zoom in */
+  }
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .card {
+      width: calc(33.333% - 1rem); /* Three cards per row */
+    }
+  }
+
+  @media (max-width: 800px) {
+    .card {
+      width: calc(50% - 1rem); /* Two cards per row */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      width: 100%; /* One card per row */
+    }
+  }
+
+
+  .checkboxes input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .checkboxes input[type="checkbox"]:checked {
+            background-color: #000;
+        }
+
+        .checkboxes input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 8px;
+            height: 4px;
+            border: solid #fff;
+            border-width: 0 0 0.1rem 0.1rem;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+</style>

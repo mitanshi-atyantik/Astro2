@@ -1,0 +1,213 @@
+[
+    {
+      "type": "hotel",
+      "name": "Grand Hotel Central",
+      "country": "France",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/TKzbY2DbsNObfatLjXCK6vNSocUHFDhs-BLRNH_RearFacade.jpg",
+      "slug": "grand-hotel-central"
+    },
+    {
+      "type": "spa",
+      "name": "Zen Retreat",
+      "country": "Thailand",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WDzcgWZcQfBuIzvvSF5NQLnVvfxq9TC8-Swimming%20Pool_JW%20Marriott%20Bengaluru%20(2).jpg",
+      "slug": "zen-retreat"
+    },
+    {
+      "type": "restaurant",
+      "name": "La Bella Italia",
+      "country": "Italy",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/pfO3ClvExfSO45m6CZodnY6uJEqKnEBT-Resort%20-%20Internal.jpg",
+      "slug": "la-bella-italia"
+    },
+    {
+      "type": "agency",
+      "name": "Travel Express",
+      "country": "USA",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/EX8W2orLggaejP138r2GIKDLyn6aH8j6-KIMCT_Courtyard%20%26%20Lobby%20(1)%20(Large).jpg",
+      "slug": "travel-express"
+    },
+    {
+      "type": "resort",
+      "name": "Sunny Beach Resort",
+      "country": "Spain",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/XVhpgxVSj82p6cp4tM22HO9UJSq8OadP-DSC057980818283.jpg",
+      "slug": "sunny-beach-resort"
+    },
+    {
+      "type": "hotel",
+      "name": "The Luxe Lodge",
+      "country": "Switzerland",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/ZeiGas91ax2njj5jGZLDboTCf4z4ws7n-outside%20restaurant%20area.jpg",
+      "slug": "the-luxe-lodge"
+    },
+    {
+      "type": "spa",
+      "name": "Tranquil Oasis",
+      "country": "Bali",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/AsfY3HUjDVeZWgvIgfIewU8NZBqqlwfh-dacwi-outdoor-heatedpool-0261-hor-clsc.jpg",
+      "slug": "tranquil-oasis"
+    },
+    {
+      "type": "restaurant",
+      "name": "Gourmet Bistro",
+      "country": "France",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/sBLjVfmUM0F4Ph5nu0zz6rYj1HSIE1Kc-breeze-spa1-min-scaled.jpg",
+      "slug": "gourmet-bistro"
+    },
+    {
+      "type": "agency",
+      "name": "Voyage Ventures",
+      "country": "Canada",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WtGVI0cBHZgP2apcGOCSEoPbBD8BOYjt-Spa%20-%20Couple%20Treatment%20Room.jpg",
+      "slug": "voyage-ventures"
+    },
+    {
+      "type": "resort",
+      "name": "Mountain Peak Resort",
+      "country": "Switzerland",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/TKzbY2DbsNObfatLjXCK6vNSocUHFDhs-BLRNH_RearFacade.jpg",
+      "slug": "mountain-peak-resort"
+    },
+    {
+      "type": "hotel",
+      "name": "Urban Elegance",
+      "country": "USA",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WDzcgWZcQfBuIzvvSF5NQLnVvfxq9TC8-Swimming%20Pool_JW%20Marriott%20Bengaluru%20(2).jpg",
+      "slug": "urban-elegance"
+    },
+    {
+      "type": "spa",
+      "name": "Oceanfront Serenity",
+      "country": "Mexico",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/pfO3ClvExfSO45m6CZodnY6uJEqKnEBT-Resort%20-%20Internal.jpg",
+      "slug": "oceanfront-serenity"
+    },
+    {
+      "type": "restaurant",
+      "name": "Café du Monde",
+      "country": "France",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/EX8W2orLggaejP138r2GIKDLyn6aH8j6-KIMCT_Courtyard%20%26%20Lobby%20(1)%20(Large).jpg",
+      "slug": "cafe-du-monde"
+    },
+    {
+      "type": "agency",
+      "name": "Wanderlust Travel",
+      "country": "Australia",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/XVhpgxVSj82p6cp4tM22HO9UJSq8OadP-DSC057980818283.jpg",
+      "slug": "wanderlust-travel"
+    },
+    {
+      "type": "resort",
+      "name": "Tropical Hideaway",
+      "country": "Bahamas",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/ZeiGas91ax2njj5jGZLDboTCf4z4ws7n-outside%20restaurant%20area.jpg",
+      "slug": "tropical-hideaway"
+    },
+    {
+      "type": "hotel",
+      "name": "Elegant Stays",
+      "country": "Italy",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/AsfY3HUjDVeZWgvIgfIewU8NZBqqlwfh-dacwi-outdoor-heatedpool-0261-hor-clsc.jpg",
+      "slug": "elegant-stays"
+    },
+    {
+      "type": "spa",
+      "name": "Healing Springs Spa",
+      "country": "USA",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/sBLjVfmUM0F4Ph5nu0zz6rYj1HSIE1Kc-breeze-spa1-min-scaled.jpg",
+      "slug": "healing-springs-spa"
+    },
+    {
+      "type": "restaurant",
+      "name": "Sushi Palace",
+      "country": "Japan",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WtGVI0cBHZgP2apcGOCSEoPbBD8BOYjt-Spa%20-%20Couple%20Treatment%20Room.jpg",
+      "slug": "sushi-palace"
+    },
+    {
+      "type": "agency",
+      "name": "Dream Destinations",
+      "country": "Brazil",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/TKzbY2DbsNObfatLjXCK6vNSocUHFDhs-BLRNH_RearFacade.jpg",
+      "slug": "dream-destinations"
+    },
+    {
+      "type": "resort",
+      "name": "Desert Mirage Resort",
+      "country": "UAE",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WDzcgWZcQfBuIzvvSF5NQLnVvfxq9TC8-Swimming%20Pool_JW%20Marriott%20Bengaluru%20(2).jpg",
+      "slug": "desert-mirage-resort"
+    },
+    {
+      "type": "hotel",
+      "name": "Riverside Retreat",
+      "country": "Canada",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/pfO3ClvExfSO45m6CZodnY6uJEqKnEBT-Resort%20-%20Internal.jpg",
+      "slug": "riverside-retreat"
+    },
+    {
+      "type": "spa",
+      "name": "Mountain Bliss Spa",
+      "country": "Switzerland",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/EX8W2orLggaejP138r2GIKDLyn6aH8j6-KIMCT_Courtyard%20%26%20Lobby%20(1)%20(Large).jpg",
+      "slug": "mountain-bliss-spa"
+    },
+    {
+      "type": "restaurant",
+      "name": "The Spice House",
+      "country": "India",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/XVhpgxVSj82p6cp4tM22HO9UJSq8OadP-DSC057980818283.jpg",
+      "slug": "the-spice-house"
+    },
+    {
+      "type": "agency",
+      "name": "Global Getaways",
+      "country": "South Africa",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/ZeiGas91ax2njj5jGZLDboTCf4z4ws7n-outside%20restaurant%20area.jpg",
+      "slug": "global-getaways"
+    },
+    {
+      "type": "resort",
+      "name": "Seaside Paradise",
+      "country": "Australia",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/AsfY3HUjDVeZWgvIgfIewU8NZBqqlwfh-dacwi-outdoor-heatedpool-0261-hor-clsc.jpg",
+      "slug": "seaside-paradise"
+    },
+    {
+      "type": "hotel",
+      "name": "Historic Inn",
+      "country": "USA",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/sBLjVfmUM0F4Ph5nu0zz6rYj1HSIE1Kc-breeze-spa1-min-scaled.jpg",
+      "slug": "historic-inn"
+    },
+    {
+      "type": "spa",
+      "name": "Royal Wellness Spa",
+      "country": "UK",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WtGVI0cBHZgP2apcGOCSEoPbBD8BOYjt-Spa%20-%20Couple%20Treatment%20Room.jpg",
+      "slug": "royal-wellness-spa"
+    },
+    {
+      "type": "restaurant",
+      "name": "Authentic Tacos",
+      "country": "Mexico",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/TKzbY2DbsNObfatLjXCK6vNSocUHFDhs-BLRNH_RearFacade.jpg",
+      "slug": "authentic-tacos"
+    },
+    {
+      "type": "agency",
+      "name": "Elite Adventures",
+      "country": "USA",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/WDzcgWZcQfBuIzvvSF5NQLnVvfxq9TC8-Swimming%20Pool_JW%20Marriott%20Bengaluru%20(2).jpg",
+      "slug": "elite-adventures"
+    },
+    {
+      "type": "resort",
+      "name": "Lush Lagoon Resort",
+      "country": "Maldives",
+      "imageUrl": "https://cdn.luxeglobalawards.com/cdn-cgi/image/width=640,fit=contain,quality=85,format=auto/production/pfO3ClvExfSO45m6CZodnY6uJEqKnEBT-Resort%20-%20Internal.jpg",
+      "slug": "lush-lagoon-resort"
+    }
+  ]
+  
