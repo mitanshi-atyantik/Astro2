@@ -2,9 +2,11 @@
 import Button from "./Button.astro";
 import RegistrationForm from "./RegistrationForm.astro";
 ---
+<!-- Main Navbar -->
 
 <nav
-  class="sm:hidden bg-white border-b border-gray-300 py-2 px-8 md:flex justify-between items-center uppercase hidden fixed top-0 left-0 w-full z-20" id="navbar"
+  class="sm:hidden bg-white border-b border-gray-300 py-2 px-8 md:flex justify-between items-center uppercase hidden fixed top-0 left-0 w-full z-20" id="navbar"  
+  aria-label="Main Navigation"
 >
   
   <div class="flex items-center space-x-6">
@@ -52,14 +54,17 @@ import RegistrationForm from "./RegistrationForm.astro";
       >Contact</a
     >
     <Button title="Register" className="register-button" />
-    <div class="block text-black text-2xl cursor-pointer" id="hamburger-icon">
+    <div class="block text-black text-2xl cursor-pointer" id="hamburger-icon" aria-label="Open menu" role="button">
       &#9776;
     </div>
   </div>
 </nav>
 
+<!-- Responsive Navbar -->
+
 <nav
-  class="bg-white border-b border-gray-300 py-2 uppercase md:hidden"
+  class="bg-white border-b border-gray-300 py-2 uppercase md:hidden"  
+  aria-label="Responsive Navigation"
 >
   <div class="responsive-nav lg:hidden flex items-center justify-between  space-x-4">
     <div></div>
@@ -84,6 +89,8 @@ import RegistrationForm from "./RegistrationForm.astro";
 <nav
   id="sidebar"
   class="fixed top-0 right-0 h-full bg-white border-l border-gray-300 shadow-lg w-0 transition-transform transform translate-x-full z-50 flex flex-col justify-center items-center p-14 space-y-6"
+    
+  aria-label="Sidebar Navigation"
 >
   <button id="close-sidebar" class="absolute top-4 right-4 text-2xl">×</button>
   <ul class="flex flex-col items-center space-y-6 uppercase">
@@ -140,15 +147,29 @@ import RegistrationForm from "./RegistrationForm.astro";
 <script>
 
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".relative").forEach((dropdown) => {
-      dropdown.addEventListener("mouseover", () => {
-        dropdown.querySelector(".dropdown").classList.remove("hidden");
-      });
-      dropdown.addEventListener("mouseout", () => {
-        dropdown.querySelector(".dropdown").classList.add("hidden");
-      });
+  // Iterate over all elements with the class 'relative'
+  document.querySelectorAll(".relative").forEach((dropdown) => {
+    // Initialize a variable to track the visibility state of the dropdown menu
+    let isDropdownVisible = false;
+
+    // Add click event listener to each dropdown container
+    dropdown.addEventListener("click", () => {
+      const dropdownMenu = dropdown.querySelector(".dropdown");
+
+      if (dropdownMenu) { // Check if dropdownMenu exists
+        if (isDropdownVisible) {
+          // Hide the dropdown menu
+          dropdownMenu.classList.add("hidden");
+        } else {
+          // Show the dropdown menu
+          dropdownMenu.classList.remove("hidden");
+        }
+        // Toggle the visibility state
+        isDropdownVisible = !isDropdownVisible;
+      }
     });
   });
+});
 </script>
 
 <script>

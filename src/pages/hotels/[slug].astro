@@ -1,0 +1,25 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from '../../Layout/Layout.astro'
+import properties from '../../Explore/properties.json'
+ 
+export async function getStaticPaths() {
+   return properties.map( property => ({
+    params :{
+        slug: property.slug
+    },
+    props: {
+        property
+    }
+   }));
+}
+ 
+const { name } = Astro.props.property
+---
+ 
+<Layout>
+    <div class="bg-white rounded-lg overflow-hidden my-32 flex items-center justify-center">
+       
+       <h1>This is hotel page for  <b>{name}</b> </h1>
+    </div>
+</Layout>

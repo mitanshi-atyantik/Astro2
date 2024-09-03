@@ -1,21 +1,63 @@
 ---
-const { slug, type, title, image } = Astro.props;
-console.log(image)
+const { imageUrl, type, country, name, slug } = Astro.props;
 ---
-<a href={`/hotels/${slug}`}>
-<div class="property-card">
-  <img src={image} alt={title} class="w-60 aspect-square"/>
-  <div class="property-info">
-    <span class="property-type">{type}</span>
-    <h2>{title}</h2>
-    
+
+<!-- <div class="card mb-14">
+  <div class="card-image-wrapper">
+    <a href=`/hotels/${slug}`
+      ><img src={imageUrl} alt={name} class="card-image" /></a
+    >
+    <div class="property-label uppercase">{type}</div>
   </div>
+
+  <p class="text-xs uppercase my-3">{country}</p>
+  <p class="text-sm uppercase">{name}</p>
+</div> -->
+
+
+
+<div class="card mb-14 bg-white text-black rounded-lg p-4 sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] xl:w-[calc(25%-0.7rem)] box-border">
+  <div class="relative w-full h-[90%] overflow-hidden rounded-lg ">
+    <a href={`/hotels/${slug}`}>
+      <img src={imageUrl} alt={name} class="w-full h-full object-cover transition-transform duration-300 ease-in-out transform-gpu rounded-lg hover:scale-105" />
+    </a>
+    <div class="property-type absolute top-4 right-0 bg-[#BA4D2C] text-white px-2 py-1 text-sm uppercase"> {type} </div>
+  </div>
+
+  <p class="property-country text-xs uppercase my-3">{country}</p>
+  <a href={`/hotels/${slug}`}><p class="property-name text-sm uppercase">{name}</p></a>
 </div>
-</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- ------------------------------ -->
-
 
 <!-- ---
 import PropertyCard from './PropertyCard.astro';

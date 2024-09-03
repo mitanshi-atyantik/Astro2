@@ -7,8 +7,8 @@ const {date, title, imgSrc, slug} = Astro.props
 <div class="overflow-hidden text-left p-4 ">
     <a href=`/bolg/${slug}` class="text-sm text-black  ">
         <img src={imgSrc} alt="Hotel Image 1" class="w-52 mb-10 object-cover  max-w-md"   >
-    <div class="text-sm text-[gray] mb-2">{date}</div>
-    <div class="text-lg text-black mb-4">{title}</div>
+    <div class="text-sm text-[#575757] mb-2">{date}</div>
+        <div class="text-lg text-black mb-4" role="heading" aria-level="2">{title}</div>
    
     </a>
 </div>

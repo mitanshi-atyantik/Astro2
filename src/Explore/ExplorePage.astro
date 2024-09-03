@@ -1,53 +1,63 @@
 ---
-import { useState } from "react";
-import properties from './properties.json'
-
-// Dummy data (you can replace this with dynamic data later)
-const dummyData = Array.from({ length: 14 }, (_, i) => ({
-  id: i + 1,
-  title: `Card ${i + 1}`,
-  description: `Description for card ${i + 1}`,
-  imageUrl: `https://via.placeholder.com/300x200?text=Card+${i + 1}`,
-  type: 'restaurent' // Placeholder image URL
-}));
+import properties from "./properties.json";
+import PropertyCard from "./PropertyCard.astro";
 ---
 
-<section class="py-32">
-  
-    <div class="heading flex flex-col items-center justify-center gap-7 py-4">
-      <span class="text-5xl uppercase">explore</span>
-      <span class="text-base uppercase">Where luxury resides</span>
-    </div>
-  
-  <div class="contain mx-10 w-full px-10">
-    
-    <div class="content px-8 py-4">
+<section
+  class="py-32 flex flex-col items-center justify-center min-h-screen bg-black text-white px-12"
+  aria-labelledby="explore-title"
+>
+  <div class="heading flex flex-col items-center justify-center gap-7 py-4">
+    <span id="explore-title" class="text-5xl uppercase" role="heading" aria-level="1">explore</span>
+    <span class="text-base uppercase">Where luxury resides</span>
+  </div>
+
+  <div class="contain mx-10 w-full px-10 bg-white rounded-3xl">
+    <div class="content py-4">
       <div class="search-container px-4 flex items-center gap-2 border-b border-black py-3 mt-5">
-        <button class="w-4">
-          <img src="https://www.luxeglobalawards.com/images/ef2b5936c5d16300adb3-search.svg" alt="search">
+        <button aria-label="Search" class="w-4">
+          <img src="https://www.luxeglobalawards.com/images/ef2b5936c5d16300adb3-search.svg" alt="Search icon" />
         </button>
-        <label for="search"></label>
-        <input id="search" type="text" placeholder="SEARCH BY COUNTRY OR NAME..." class="text-sm w-full focus:outline-none text-black">
-        
+        <label for="search" class="sr-only">Search</label>
+        <input
+          id="search"
+          type="text"
+          placeholder="SEARCH BY COUNTRY OR NAME..."
+          class="text-sm w-full focus:outline-none text-black"
+          aria-label="Search by country or name"
+        />
       </div>
-      <div class="checkboxes px-4  flex items-center gap-4 py-5 text-sm text-gray-500">
-        <label class="flex items-center gap-2"><input type="checkbox" /> Hotels</label>
-        <label class="flex items-center gap-2"><input type="checkbox" /> Restaurants</label>
-        <label class="flex items-center gap-2"><input type="checkbox" /> SPAs</label>
-        <label class="flex items-center gap-2"><input type="checkbox" /> Agencies</label>
+      <div class="checkboxes">
+        <fieldset class="px-4 flex items-center gap-4 py-5 text-sm text-gray-500">
+          <legend class="sr-only">Filter by property type</legend>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" value="Hotel" class="filter-checkbox" aria-label="Hotels" />
+            Hotels
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" value="Restaurant" class="filter-checkbox" aria-label="Restaurants" />
+            Restaurants
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" value="SPA" class="filter-checkbox" aria-label="SPAs" />
+            SPAs
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" value="Agency" class="filter-checkbox" aria-label="Agencies" />
+            Agencies
+          </label>
+        </fieldset>
       </div>
-     <div class="cards-container "> 
+      <div id="cards-container" class="cards-container flex flex-wrap gap-[0.7rem]" role="region"  aria-label="List of properties">
         {
           properties.map((property) => (
-            <div class="card mb-14">
-              <div class="card-image-wrapper">
-                <img src={property.imageUrl} alt={property.name} class="card-image" />
-                <div class="property-label uppercase">{property.type}</div> 
-              </div>
-             
-              <span class="text-sm uppercase my-3">{property.country}</span>
-              <p class="text-sm uppercase">{property.name}</p>
-            </div>
+            <PropertyCard
+              imageUrl={property.imageUrl}
+              name={property.name}
+              type={property.type}
+              country={property.country}
+              slug={property.slug}
+            />
           ))
         }
       </div>
@@ -56,126 +66,75 @@ const dummyData = Array.from({ length: 14 }, (_, i) => ({
 </section>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: black;
-    color: white;
-  }
-
-  /* Heading Styles */
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-  }
-
-  .content{
-    background-color: white;
-    border-radius: 10px;
-  }
-
-  /* Cards Container Styles */
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
- 
-  }
-
-  /* Card Styles */
-  .card {
-
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 1rem;
-    width: calc(25% - 0.7rem);
-    box-sizing: border-box;
-  }
-
-  /* Card Image Styles */
-
-  .card-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
-    overflow: hidden; /* Hide overflow to keep the card layout clean */
-    border-radius: 10px;
-  }
-
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure image covers the container */
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-    transform-origin: center; /* Scale from center */
-    border-radius: 10px;
-  }
-
-  .property-label {
-  position: absolute;
-  top: 1rem;
-  right: 0;
-  background-color: rgb(212, 104, 72); /* Semi-transparent background */
-  color: #fff;
-  padding: 0 5px;
-  font-size: 1em;
-}
-
-  .card-image:hover {
-    transform: scale(1.05); /* Slightly zoom in */
-  }
-  /* Responsive Styles */
-  @media (max-width: 1200px) {
-    .card {
-      width: calc(33.333% - 1rem); /* Three cards per row */
-    }
-  }
-
-  @media (max-width: 800px) {
-    .card {
-      width: calc(50% - 1rem); /* Two cards per row */
-    }
-  }
-
-  @media (max-width: 500px) {
-    .card {
-      width: 100%; /* One card per row */
-    }
-  }
-
-
   .checkboxes input[type="checkbox"] {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            width: 15px;
-            height: 15px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            outline: none;
-            cursor: pointer;
-            position: relative;
-        }
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
 
-        .checkboxes input[type="checkbox"]:checked {
-            background-color: #000;
-        }
+  .checkboxes input[type="checkbox"]:checked {
+    background-color: #000;
+  }
 
-        .checkboxes input[type="checkbox"]:checked::after {
-            content: '';
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            width: 8px;
-            height: 4px;
-            border: solid #fff;
-            border-width: 0 0 0.1rem 0.1rem;
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-
+  .checkboxes input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 8px;
+    height: 4px;
+    border: solid #fff;
+    border-width: 0 0 0.1rem 0.1rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search') as HTMLInputElement;
+    const cardsContainer = document.getElementById('cards-container') as HTMLElement;
+    const checkboxes = document.querySelectorAll('.filter-checkbox') as NodeListOf<HTMLInputElement>;
+
+    // Function to filter cards
+    const filterCards = () => {
+      const searchText = searchInput.value.toLowerCase();
+      const checkedFilters = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value.toLowerCase());
+
+      console.log('Checked Filters:', checkedFilters);
+
+      // Loop through each card
+      Array.from(cardsContainer.children).forEach(card => {
+        const nameElement = card.querySelector('.property-name') as HTMLElement;
+        const countryElement = card.querySelector('.property-country') as HTMLElement;
+        const typeElement = card.querySelector('.property-type') as HTMLElement;
+
+        if (nameElement && countryElement && typeElement) {
+          const name = nameElement.textContent?.toLowerCase() || '';
+          const country = countryElement.textContent?.toLowerCase() || '';
+          const type = typeElement.textContent?.toLowerCase().trim() || '';
+
+          // Check if card matches search text and filters
+          const matchesSearch = name.includes(searchText) || country.includes(searchText);
+          const matchesFilter = checkedFilters.length === 0 || checkedFilters.includes(type);
+          console.log('Type:', type, 'Matches Filter:', matchesFilter);
+
+          // Display the card if it matches both the search text and selected filters
+          (card as HTMLElement).style.display = matchesSearch && matchesFilter ? '' : 'none';
+        }
+      });
+    };
+
+    // Event listeners for search input and checkboxes
+    searchInput.addEventListener('input', filterCards);
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterCards));
+  });
+</script>

@@ -4,7 +4,7 @@ const { date, title, imgSrc, slug } = Astro.props;
 
 <section>
   <a href={`/blogs/${slug}`} class="block overflow-hidden text-left p-4">
-    <div class="text-sm text-[gray] mb-2">{date}</div>
+    <div class="text-sm text-[#575757] mb-2">{date}</div>
     <div class="text-lg text-black mb-4">{title}</div>
     <img
       src={imgSrc}
